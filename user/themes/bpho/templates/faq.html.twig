@@ -6,7 +6,7 @@
   </h2>
   <ul class="list pl0">
     {% for faq in section.faqs %}
-      <li class="js-faq bt bb pv3">
+      <li class="js-faq bt bb b--moon-gray pv3">
         {{ _self.renderFaq(faq) }}
       </li>
     {% endfor %}
@@ -14,17 +14,17 @@
 {% endmacro renderSection %}
 
 {% macro renderFaq(faq) %}
-  <h3 class="js-faq-question ma0">
+  <h3 class="js-faq-question ma0 fw4">
     {{ faq.question }}
   </h3>
-  <div class="js-faq-answer js-dn mt3">
+  <div class="js-faq-answer js-dn mt3 ph3">
     {{ faq.answer }}
   </div>
 {% endmacro renderFaq %}
 
 {% block below_content %}
   {% for section in header.sections %}
-    <section>
+    <section class="mb5">
       {{ _self.renderSection(section) }}
     </section>
   {% endfor %}
