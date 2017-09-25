@@ -4604,7 +4604,7 @@ a:visited {
 .pl3 {
   padding-left: 1rem; }
 
-.pl4 {
+.pl4, .notices {
   padding-left: 2rem; }
 
 .pl5 {
@@ -4625,7 +4625,7 @@ a:visited {
 .pr2 {
   padding-right: 0.5rem; }
 
-.pr3 {
+.pr3, .notices {
   padding-right: 1rem; }
 
 .pr4 {
@@ -4696,7 +4696,7 @@ a:visited {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem; }
 
-.pv2 {
+.pv2, .notices {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
@@ -4888,7 +4888,7 @@ a:visited {
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
-.mv4 {
+.mv4, .notices {
   margin-top: 2rem;
   margin-bottom: 2rem; }
 
@@ -7042,3 +7042,23 @@ a:focus {
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.notices.yellow {
+  border-left: 10px solid #f0ad4e;
+  background: #fcf8f2;
+  color: #df8a13; }
+
+.notices.red {
+  border-left: 10px solid #d9534f;
+  background: #fdf7f7;
+  color: #b52b27; }
+
+.notices.blue, a.notices {
+  border-left: 10px solid #5bc0de;
+  background: #f4f8fa;
+  color: #28a1c5; }
+
+.notices.green {
+  border-left: 10px solid #5cb85c;
+  background: #f1f9f1;
+  color: #3d8b3d; }
