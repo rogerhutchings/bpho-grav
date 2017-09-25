@@ -20,7 +20,7 @@ home:
   alias: /home
   hide_in_urls: false
 pages:
-  theme: spark-communications
+  theme: bpho
   order:
     by: default
     dir: asc
@@ -111,6 +111,9 @@ assets:
   enable_asset_timestamp: false
   collections:
     jquery: 'system://assets/jquery/jquery-2.x.min.js'
+    fonts:
+      - '//fonts.googleapis.com/css?family=Nunito+Sans:100,200,400'
+      - '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
 errors:
   display: '1'
   log: true

@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "js": "webpack --progress --colors",
-    "js:watch": "webpack --progress --colors --watch",
+    "js:watch": "npm run js -- --watch",
     "scss": "node-sass ./scss/index.scss ./css-compiled/index.css",
-    "scss:dist": "node-sass ./scss/index.scss ./css-compiled/index.css --output-style compressed",
-    "scss:watch": "node-sass --watch ./scss/index.scss ./css-compiled/index.css"
+    "scss:dist": "npm run scss -- --output-style compressed",
+    "scss:watch": "npm run scss -- --watch"
   },
   "author": "Roger Hutchings <roger@hutchin.gs> (https://www.rogerhutchin.gs/)",
   "license": "Apache-2.0",

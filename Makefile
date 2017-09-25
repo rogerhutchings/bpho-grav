@@ -1,5 +1,5 @@
 DOCKER_NAMESPACE = rog
-DOCKER_PROJECT = spark-communications
+DOCKER_PROJECT = bpho
 DOCKER_INSTANCE = $(DOCKER_PROJECT)-instance
 
 build:
