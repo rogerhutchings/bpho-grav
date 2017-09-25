@@ -1,1 +1,4 @@
-import './map.js';
+import './header';
+import './nav';
+
+$('html').addClass('js');

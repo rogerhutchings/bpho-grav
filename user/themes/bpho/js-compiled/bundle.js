@@ -73,25 +73,31 @@
 "use strict";
 
 
-// Google Maps function. Note that it's added to the window object in order to
-// make it available as a callback to the maps script.
-var mapNode = document.getElementById('map');
-var latLong = {
-  lat: 51.516145,
-  long: -0.135316
-};
+function initNav() {
+  var openMenu = $('.js-open-menu');
+  var closeMenu = $('.js-close-menu');
+  var nav = $('.js-nav');
 
-var map = void 0;
+  var MENU_TRANSITION = 200;
 
-function initMap() {
-  map = new google.maps.Map(mapNode, {
-    zoom: 16,
-    center: new google.maps.LatLng(latLong),
-    mapTypeId: 'roadmap'
+  nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
+
+  openMenu.on('click', function () {
+    nav.removeClass('translate-y--100');
+    setTimeout(function () {
+      return closeMenu.addClass('is-active');
+    }, MENU_TRANSITION);
+  });
+
+  closeMenu.on('click', function () {
+    nav.addClass('translate-y--100');
+    setTimeout(function () {
+      return closeMenu.removeClass('is-active');
+    }, MENU_TRANSITION);
   });
 }
 
-window.initMap = initMap;
+$(document).ready(initNav);
 
 /***/ }),
 /* 1 */
@@ -100,7 +106,26 @@ window.initMap = initMap;
 "use strict";
 
 
+__webpack_require__(2);
+
 __webpack_require__(0);
+
+$('html').addClass('js');
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initHeader() {
+  var header = $('.js-header');
+
+  header.stick_in_parent();
+}
+
+$(document).ready(initHeader);
 
 /***/ })
 /******/ ]);

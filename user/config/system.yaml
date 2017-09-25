@@ -111,6 +111,8 @@ assets:
   enable_asset_timestamp: false
   collections:
     jquery: 'system://assets/jquery/jquery-2.x.min.js'
+    plugins:
+      - '//cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js'
     fonts:
       - '//fonts.googleapis.com/css?family=Nunito+Sans:100,200,400'
       - '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
