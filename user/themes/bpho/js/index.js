@@ -1,3 +1,4 @@
+import './faqs';
 import './header';
 import './nav';
 

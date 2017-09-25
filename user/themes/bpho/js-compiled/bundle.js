@@ -106,6 +106,8 @@ $(document).ready(initNav);
 "use strict";
 
 
+__webpack_require__(3);
+
 __webpack_require__(2);
 
 __webpack_require__(0);
@@ -126,6 +128,41 @@ function initHeader() {
 }
 
 $(document).ready(initHeader);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initFaqs() {
+  var faq = $('.js-faq');
+  var answers = $('.js-faq-answer');
+  var questions = $('.js-faq-question');
+
+  questions.addClass('pointer dim').append('<i class="fa fa-angle-down pe-none" aria-hidden="true"></i>');
+
+  answers.removeClass('js-dn').hide();
+
+  questions.on('click', toggleFaqState);
+}
+
+function toggleFaqState(_ref) {
+  var target = _ref.target;
+
+  var question = $(target);
+  var arrow = question.children('.fa');
+  var isOpen = question.data('is-open');
+  var rotation = isOpen ? '0deg' : '-180deg';
+
+  arrow.transition({ rotate: rotation });
+  $(target).siblings().slideToggle(200);
+  question.data('is-open', !isOpen);
+  return false;
+}
+
+$(document).ready(initFaqs);
 
 /***/ })
 /******/ ]);

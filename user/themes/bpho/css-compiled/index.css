@@ -6935,6 +6935,9 @@ a:focus {
 .nunito {
   font-family: 'Nunito Sans', sans-serif; }
 
+.pe-none {
+  pointer-events: none; }
+
 .translate-y-0 {
   transform: translateY(0); }
 

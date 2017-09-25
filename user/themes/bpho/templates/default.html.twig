@@ -1,1 +1,20 @@
 {% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  <main id="main" class="bg-red mw7 pa4 center">
+    <article>
+      {% block title %}
+        <h1>
+          {{ header.title }}
+        </h1>
+      {% endblock title %}
+
+      {% block content %}
+        {{ content }}
+      {% endblock content %}
+
+      {% block below_content %}
+      {% endblock below_content %}
+    </article>
+  </main>
+{% endblock main %}
