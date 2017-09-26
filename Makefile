@@ -1,20 +1,11 @@
-DOCKER_NAMESPACE = rog
-DOCKER_PROJECT = bpho
-DOCKER_INSTANCE = $(DOCKER_PROJECT)-instance
-
 build:
-	docker build \
-		--file Dev_Dockerfile \
-		--no-cache \
-		--tag $(DOCKER_NAMESPACE)/$(DOCKER_PROJECT) \
-		.
+	docker-compose build
+
+full-build:
+	docker-compose build --no-cache
 
 run:
-	-docker kill $(DOCKER_INSTANCE)
-	-docker rm $(DOCKER_INSTANCE)
-	docker run \
-		--detach \
-		--name $(DOCKER_INSTANCE) \
-		--publish 80:80 \
-		--volume $(CURDIR)/user/:/usr/share/nginx/html/user/ \
-		$(DOCKER_NAMESPACE)/$(DOCKER_PROJECT)
+	docker-compose up
+
+terminal:
+	docker exec -i -t bphogh_web_1 /bin/bash
