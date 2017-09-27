@@ -8,13 +8,13 @@
 {% set bgFillColor = 'bg-' ~ fillColor %}
 
 {% set margin = (direction == 'left')
-  ? 'mr0 mr4-ns mr5-l'
-  : 'ml0 ml4-ns ml5-l'
+  ? 'mr0 mr5-ns mr6-l'
+  : 'ml0 ml5-ns ml5-l'
 %}
 
 {% set padding = (direction == 'left')
-  ? 'pl0 pl4-ns pl5-l'
-  : 'pr0 pr4-ns pr5-l'
+  ? 'pl0 pl5-ns pl6-l'
+  : 'pr0 pr5-ns pr5-l'
 %}
 
 <section class="mv5 {{ margin }}">
@@ -23,7 +23,7 @@
   {% endif %}
 
   <div class="{{ bgFillColor }} {{ padding }}">
-    <div class="measure-wide center pa3">
+    <div class="measure-wide center pv5 ph3">
       <h2 class="fw2 mt0 mb5">
         {% block title %}
           Polygon title

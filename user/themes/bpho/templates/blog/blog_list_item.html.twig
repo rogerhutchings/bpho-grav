@@ -1,0 +1,24 @@
+{% set image = page.media.images|first %}
+{% set bottomMargin = (loop.last) ? 'mb0' : 'mb5' %}
+
+<article class="mb5">
+  {% if image %}
+    {{ image.html(null, null, 'w-100') }}
+  {% endif %}
+
+  <time class="dib f6" datetime="{{ page.date|date("c") }}">
+    {{ page.date|date("F j, Y") }}
+  </time>
+
+  <h2 class="f3 mt2 lh-title">
+    <a href="{{ page.url }}" class="black">
+      {{ page.title }}
+    </a>
+  </h2>
+
+  {{ page.summary|default(page.content) }}
+
+  <a href="{{ page.url }}">
+    Read more...
+  </a>
+</article>

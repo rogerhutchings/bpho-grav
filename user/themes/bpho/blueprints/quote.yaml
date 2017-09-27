@@ -1,0 +1,9 @@
+title: FAQ
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:

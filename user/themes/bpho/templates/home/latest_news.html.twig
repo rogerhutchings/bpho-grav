@@ -1,0 +1,35 @@
+{% embed 'partials/polygon.html.twig' %}
+  {% set posts = page.find('/blog').children.order('date', 'desc').slice(0, 5) %}
+
+  {% block title %}
+    Latest News
+  {% endblock %}
+
+  {% block content %}
+    <ul class="list pl0 ma0">
+      {% for post in posts %}
+        <li class="mb3 bt b--moon-gray flex pt3 mb4">
+          <time class="db" datetime="{{ post.date|date("c") }}">
+            <span class="f2 db lh-solid">
+              {{ post.date|date('d') }}
+            </span>
+            <span class="f6 db">
+              {{ post.date|date('F') }}
+            </span>
+          </time>
+
+          <div class="flex-auto ml4">
+            <a href="{{ post.url }}" class="db black underline-hover f4">
+              {{ post.title }}
+            </a>
+            <a href="{{ post.url }}" class="db tr underline-hover fw2">
+              Read more...
+            </a>
+          </div>
+
+
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock content %}
+{% endembed %}
