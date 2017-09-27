@@ -11,15 +11,15 @@
 
 {% macro loop(page) %}
   {% for p in page.children.visible %}
-    <li>
+    <li class="mr3">
       {{ _self.topLevelLink(p.url, p.menu) }}
     </li>
   {% endfor %}
 {% endmacro %}
 
-<nav class="js-nav js-dn bg-navy white ph4 pv4 w-100">
-  {{ menuButton({ jsClass: 'js-close-menu', textColor: 'white' }) }}
-  <ul class="list pl0">
+<nav class="js-nav js-dn bg-navy white ph4 pv4 w-100 flex">
+  {{ menuButton({ jsClass: 'js-close-menu', classes: '', textColor: 'white', text: 'Close' }) }}
+  <ul class="list pl0 ma0 flex">
     {{ _self.loop(pages) }}
   </ul>
 </nav>

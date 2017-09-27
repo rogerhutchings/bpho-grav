@@ -6929,6 +6929,117 @@ a:focus {
   Add custom styles here.
 
 */
+.f-black {
+  fill: #000; }
+
+.f-near-black {
+  fill: #111; }
+
+.f-dark-gray {
+  fill: #545462; }
+
+.f-mid-gray {
+  fill: #9897A5; }
+
+.f-gray {
+  fill: #777; }
+
+.f-silver {
+  fill: #999; }
+
+.f-light-silver {
+  fill: #aaa; }
+
+.f-moon-gray {
+  fill: #ccc; }
+
+.f-light-gray {
+  fill: #eee; }
+
+.f-near-white {
+  fill: #f4f4f4; }
+
+.f-white {
+  fill: #fff; }
+
+.f-dark-red {
+  fill: #e7040f; }
+
+.f-red {
+  fill: #ff4136; }
+
+.f-light-red {
+  fill: #ff725c; }
+
+.f-orange {
+  fill: #ff6300; }
+
+.f-gold {
+  fill: #f0e32c; }
+
+.f-yellow {
+  fill: #ffd700; }
+
+.f-light-yellow {
+  fill: #fbf1a9; }
+
+.f-purple {
+  fill: #3D3446; }
+
+.f-light-purple {
+  fill: #a463f2; }
+
+.f-dark-pink {
+  fill: #d5008f; }
+
+.f-hot-pink {
+  fill: #ff41b4; }
+
+.f-pink {
+  fill: #ff80cc; }
+
+.f-light-pink {
+  fill: #ffa3d7; }
+
+.f-dark-green {
+  fill: #137752; }
+
+.f-green {
+  fill: #19a974; }
+
+.f-light-green {
+  fill: #9eebcf; }
+
+.f-navy {
+  fill: #1F2034; }
+
+.f-dark-blue {
+  fill: #0E2B5D; }
+
+.f-blue {
+  fill: #2E6FF3; }
+
+.f-light-blue {
+  fill: #96ccff; }
+
+.f-lightest-blue {
+  fill: #F5F4F9; }
+
+.f-washed-blue {
+  fill: #f6fffe; }
+
+.f-washed-green {
+  fill: #e8fdf5; }
+
+.f-washed-yellow {
+  fill: #fffceb; }
+
+.f-washed-red {
+  fill: #ffdfdf; }
+
+.f-fill-inherit {
+  fill: inherit; }
+
 .no-underline-hover:hover {
   text-decoration: none; }
 
