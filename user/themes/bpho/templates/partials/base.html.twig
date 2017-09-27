@@ -1,5 +1,5 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% from 'partials/macros.html.twig' import menuButton  %}
+{% from 'macros/menu-button.html.twig' import menuButton  %}
 
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">

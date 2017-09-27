@@ -1,8 +1,10 @@
 {% macro menuButton(args) %}
+  {% set hamburgerType = args.hamburgerType|default('hamburger--squeeze') %}
   {% set jsClass = args.jsClass|default('') %}
   {% set textColor = args.textColor|default('black') %}
+
   <button
-    class="{{ jsClass }} {{ textColor }} hamburger hamburger--squeeze"
+    class="{{ jsClass }} {{ textColor }} hamburger {{ hamburgerType }}"
     type="button"
   >
     <span class="hamburger-box v-mid">
@@ -12,5 +14,4 @@
       Menu
     </span>
   </button>
-
 {% endmacro menuButton %}
