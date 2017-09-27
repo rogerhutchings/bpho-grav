@@ -1,0 +1,16 @@
+{% macro menuButton(args) %}
+  {% set jsClass = args.jsClass|default('') %}
+  {% set textColor = args.textColor|default('black') %}
+  <button
+    class="{{ jsClass }} {{ textColor }} hamburger hamburger--squeeze"
+    type="button"
+  >
+    <span class="hamburger-box v-mid">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="v-mid ml1">
+      Menu
+    </span>
+  </button>
+
+{% endmacro menuButton %}

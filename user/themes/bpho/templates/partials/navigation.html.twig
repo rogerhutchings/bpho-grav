@@ -1,3 +1,5 @@
+{% from 'partials/macros.html.twig' import menuButton  %}
+
 {% macro topLevelLink(url, title) %}
   <a
     class="white"
@@ -16,17 +18,7 @@
 {% endmacro %}
 
 <nav class="js-nav js-dn bg-navy white ph4 pv4 w-100">
-  <button
-    class="js-close-menu white hamburger hamburger--squeeze"
-    type="button"
-  >
-    <span class="hamburger-box v-mid">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="v-mid ml1">
-      Menu
-    </span>
-  </button>
+  {{ menuButton({ jsClass: 'js-close-menu', textColor: 'white' }) }}
   <ul class="list pl0">
     {{ _self.loop(pages) }}
   </ul>
