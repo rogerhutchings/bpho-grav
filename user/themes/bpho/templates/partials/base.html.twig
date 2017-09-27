@@ -38,7 +38,7 @@
   <body id="top" class="{{ page.header.body_classes }} nunito fw2 lh-copy">
 
     {% block header %}
-      <header class="js-header z-1 bg-white relative ph4 pv4">
+      <header class="js-header z-1 bg-white relative ph4 pv4 flex justify-between">
         <button
           class="js-open-menu black hamburger hamburger--squeeze"
           type="button"
@@ -46,10 +46,17 @@
           <span class="hamburger-box v-mid">
             <span class="hamburger-inner"></span>
           </span>
-          Menu
+          <span class="v-mid ml1">
+            Menu
+          </span>
         </button>
 
         {% include 'partials/navigation.html.twig' %}
+
+        <div class="fw4 flex items-center">
+          {% include 'svgs/bpho-logo.svg.twig' with { classes: 'h2 pr3', color: '#333' } %}
+          BPhO
+        </div>
 
       </header>
     {% endblock header %}

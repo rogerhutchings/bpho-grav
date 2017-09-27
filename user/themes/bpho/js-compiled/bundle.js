@@ -63,74 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function initNav() {
-  var openMenu = $('.js-open-menu');
-  var closeMenu = $('.js-close-menu');
-  var nav = $('.js-nav');
-
-  var MENU_TRANSITION = 200;
-
-  nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
-
-  openMenu.on('click', function () {
-    nav.removeClass('translate-y--100');
-    setTimeout(function () {
-      return closeMenu.addClass('is-active');
-    }, MENU_TRANSITION);
-  });
-
-  closeMenu.on('click', function () {
-    nav.addClass('translate-y--100');
-    setTimeout(function () {
-      return closeMenu.removeClass('is-active');
-    }, MENU_TRANSITION);
-  });
-}
-
-$(document).ready(initNav);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(3);
-
-__webpack_require__(2);
-
-__webpack_require__(0);
-
-$('html').addClass('js');
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function initHeader() {
-  var header = $('.js-header');
-
-  header.stick_in_parent();
-}
-
-$(document).ready(initHeader);
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -163,6 +100,69 @@ function toggleFaqState(_ref) {
 }
 
 $(document).ready(initFaqs);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initHeader() {
+  var header = $('.js-header');
+
+  header.stick_in_parent();
+}
+
+$(document).ready(initHeader);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initNav() {
+  var openMenu = $('.js-open-menu');
+  var closeMenu = $('.js-close-menu');
+  var nav = $('.js-nav');
+
+  var MENU_TRANSITION = 200;
+
+  nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
+
+  openMenu.on('click', function () {
+    nav.removeClass('translate-y--100');
+    setTimeout(function () {
+      return closeMenu.addClass('is-active');
+    }, MENU_TRANSITION);
+  });
+
+  closeMenu.on('click', function () {
+    nav.addClass('translate-y--100');
+    setTimeout(function () {
+      return closeMenu.removeClass('is-active');
+    }, MENU_TRANSITION);
+  });
+}
+
+$(document).ready(initNav);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(0);
+
+__webpack_require__(1);
+
+__webpack_require__(2);
+
+$('html').addClass('js');
 
 /***/ })
 /******/ ]);
