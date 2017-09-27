@@ -6929,6 +6929,9 @@ a:focus {
   Add custom styles here.
 
 */
+.top-50 {
+  top: 50%; }
+
 .f-black {
   fill: #000; }
 
@@ -7058,6 +7061,9 @@ a:focus {
 .tr-translate {
   transition: transform 0.3s;
   will-change: transform; }
+
+.translate-y-center {
+  transform: translateY(-50%); }
 
 /*!
  * Hamburgers

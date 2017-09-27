@@ -10,3 +10,7 @@
   transition: transform 0.3s;
   will-change: transform;
 }
+
+.translate-y-center {
+  transform: translateY(-50%);
+}

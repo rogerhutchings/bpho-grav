@@ -11,13 +11,19 @@ function initNav() {
 
   openMenu.on('click', () => {
     nav.removeClass('translate-y--100');
+    openMenu.addClass('is-active');
     setTimeout(() => closeMenu.addClass('is-active'), MENU_TRANSITION);
 
   });
 
   closeMenu.on('click', () => {
     nav.addClass('translate-y--100');
-    setTimeout(() => closeMenu.removeClass('is-active'), MENU_TRANSITION);
+    openMenu.removeClass('is-active');
+    setTimeout(() => {
+      closeMenu.removeClass('is-active');
+      closeMenu.removeClass('is-active');
+    }, MENU_TRANSITION);
+
   });
 }
 

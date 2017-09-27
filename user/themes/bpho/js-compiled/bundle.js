@@ -134,6 +134,7 @@ function initNav() {
 
   openMenu.on('click', function () {
     nav.removeClass('translate-y--100');
+    openMenu.addClass('is-active');
     setTimeout(function () {
       return closeMenu.addClass('is-active');
     }, MENU_TRANSITION);
@@ -141,8 +142,10 @@ function initNav() {
 
   closeMenu.on('click', function () {
     nav.addClass('translate-y--100');
+    openMenu.removeClass('is-active');
     setTimeout(function () {
-      return closeMenu.removeClass('is-active');
+      closeMenu.removeClass('is-active');
+      closeMenu.removeClass('is-active');
     }, MENU_TRANSITION);
   });
 }
