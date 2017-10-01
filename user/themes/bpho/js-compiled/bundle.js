@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -159,11 +159,52 @@ $(document).ready(initNav);
 "use strict";
 
 
+/*
+
+  TOP HERO resizer
+
+  Looks for a hero element at the top of the page (designated by class), and
+  resizes it to fill the viewport space minus the nav height.
+
+ */
+
+function initTopHero() {
+  var resizers = $('.js-top-hero');
+
+  if (!resizers.length) {
+    return false;
+  }
+
+  function setHeight(el) {
+    var navHeight = $('#header').outerHeight();
+    var windowHeight = $(window).height();
+    $(this).height(windowHeight - navHeight);
+  }
+
+  resizers.each(setHeight);
+  resizers.children('.js-dn').removeClass('js-dn');
+
+  $(window).resize(function () {
+    $.throttle(resizers.each(setHeight), 100);
+  });
+}
+
+$(document).ready(initTopHero);
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
 __webpack_require__(0);
 
 __webpack_require__(1);
 
 __webpack_require__(2);
+
+__webpack_require__(3);
 
 $('html').addClass('js');
 

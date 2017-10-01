@@ -1,4 +1,4 @@
-title: FAQ
+title: Quote
 '@extends':
     type: default
     context: blueprints://pages

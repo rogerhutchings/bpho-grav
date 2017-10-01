@@ -39,7 +39,7 @@
   <body id="top" class="{{ page.header.body_classes }} nunito fw2 lh-copy">
 
     {% block header %}
-      <header class="js-header z-1 bg-white relative ph4 pv4 flex justify-between">
+      <header id="header" class="js-header z-1 bg-white relative ph4 pv4 flex justify-between">
         {{ menuButton({ jsClass: 'js-open-menu' }) }}
 
         {% include 'partials/navigation.html.twig' %}
