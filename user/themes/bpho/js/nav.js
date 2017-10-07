@@ -2,12 +2,20 @@ function initNav() {
   const openMenu = $('.js-open-menu');
   const closeMenu = $('.js-close-menu');
   const nav = $('.js-nav');
+  const header = $('.js-header');
 
   const MENU_TRANSITION = 200;
 
   nav
     .removeClass('js-dn')
     .addClass('db absolute top-0 left-0 tr-translate translate-y--100');
+
+  const headerHeight = header.outerHeight();
+
+  if (headerHeight > nav.outerHeight()) {
+    nav.outerHeight(headerHeight);
+  }
+
 
   openMenu.on('click', () => {
     nav.removeClass('translate-y--100');
@@ -20,7 +28,7 @@ function initNav() {
     nav.addClass('translate-y--100');
     openMenu.removeClass('is-active');
     setTimeout(() => {
-      closeMenu.removeClass('is-active');
+      // closeMenu.removeClass('is-active');
       closeMenu.removeClass('is-active');
     }, MENU_TRANSITION);
 

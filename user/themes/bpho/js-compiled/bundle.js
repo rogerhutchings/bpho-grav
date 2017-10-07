@@ -127,10 +127,17 @@ function initNav() {
   var openMenu = $('.js-open-menu');
   var closeMenu = $('.js-close-menu');
   var nav = $('.js-nav');
+  var header = $('.js-header');
 
   var MENU_TRANSITION = 200;
 
   nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
+
+  var headerHeight = header.outerHeight();
+
+  if (headerHeight > nav.outerHeight()) {
+    nav.outerHeight(headerHeight);
+  }
 
   openMenu.on('click', function () {
     nav.removeClass('translate-y--100');
@@ -144,7 +151,7 @@ function initNav() {
     nav.addClass('translate-y--100');
     openMenu.removeClass('is-active');
     setTimeout(function () {
-      closeMenu.removeClass('is-active');
+      // closeMenu.removeClass('is-active');
       closeMenu.removeClass('is-active');
     }, MENU_TRANSITION);
   });

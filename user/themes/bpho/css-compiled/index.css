@@ -6929,6 +6929,12 @@ a:focus {
   Add custom styles here.
 
 */
+.bg-feynman {
+  background-image: url("../images/background.png"); }
+
+.bg-no-repeat {
+  background-repeat: no-repeat; }
+
 .top-50 {
   top: 50%; }
 

@@ -1,20 +1,22 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block main %}
-  <main id="main" class="mw7 ph3 ph4-ns pv4 mb5 center">
-    <article>
-      {% block title %}
-        <h1 class="lh-title tc mb6">
-          {{ header.title }}
-        </h1>
-      {% endblock title %}
+  <main id="main" class="bg-feynman contain bg-no-repeat ph3 pt3 pt5-ns">
+    {% block main_content %}
+      <article class="mw7 ph3 ph4-ns pv4 mb5 mh2 center bg-white">
+        {% block title %}
+          <h1 class="lh-title fw3 mb5">
+            {{ header.title }}
+          </h1>
+        {% endblock title %}
 
-      {% block content %}
-        {{ content }}
-      {% endblock content %}
+        {% block content %}
+          {{ content }}
+        {% endblock content %}
 
-      {% block below_content %}
-      {% endblock below_content %}
-    </article>
+        {% block below_content %}
+        {% endblock below_content %}
+      </article>
+    {% endblock main_content %}
   </main>
 {% endblock main %}
