@@ -1,0 +1,16 @@
+{% set logos = {
+  'svgs/sponsors/oup.svg.twig': 'h3',
+  'svgs/sponsors/oxford.svg.twig': 'h3',
+  'svgs/sponsors/texas-instruments.svg.twig': 'h3',
+} %}
+
+<section class="w-100 bg-lightest-blue mid-gray tc pa4">
+  <h5 class="ma0">Our Sponsors</h5>
+  <ul class="list pl0 tc flex flex-row items-center justify-center">
+    {% for logo, c in logos %}
+      <li class="db dib-ns mh3">
+        {% include logo with { classes: 'db f-mid-gray ' ~ c  } %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
