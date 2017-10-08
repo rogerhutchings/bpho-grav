@@ -133,12 +133,6 @@ function initNav() {
 
   nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
 
-  var headerHeight = header.outerHeight();
-
-  if (headerHeight > nav.outerHeight()) {
-    nav.outerHeight(headerHeight);
-  }
-
   openMenu.on('click', function () {
     nav.removeClass('translate-y--100');
     openMenu.addClass('is-active');

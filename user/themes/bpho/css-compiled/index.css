@@ -6935,6 +6935,9 @@ a:focus {
 .bg-no-repeat {
   background-repeat: no-repeat; }
 
+.bg-top-center {
+  background-position: top center; }
+
 .top-50 {
   top: 50%; }
 
