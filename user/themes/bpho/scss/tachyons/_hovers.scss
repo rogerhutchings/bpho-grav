@@ -3,3 +3,10 @@
     text-decoration: none;
   }
 }
+
+.bb-hover {
+  &:hover {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+}

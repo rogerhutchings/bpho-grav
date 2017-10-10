@@ -1,0 +1,40 @@
+{% macro renderYear(year) %}
+  <h3>
+    {{ year.year }}
+    {% for paper in year.papers %}
+      {{ _self.renderPaper(paper, loop.last) }}
+    {% endfor %}
+  </h3>
+{% endmacro renderYear %}
+
+{% macro renderPaper(paper, isLast) %}
+  {{ dump(paper) }}
+  <a href="/{{ paper.file|first.path }}">
+    {% if paper.customTitle %}
+      {{ paper.customTitle }}
+    {% else %}
+      {{ paper.title }}
+    {% endif %}
+  </a>
+  {% if isLast == false %}
+    <span>
+      &ndash;
+    </span>
+  {% endif %}
+{% endmacro renderPaper %}
+
+<section>
+  {% if header.showTitle %}
+    <h2>
+      {{ title }}
+    </h2>
+  {% endif %}
+
+  {% if header.showContent %}
+    {{ section }}
+  {% endif %}
+
+  {% for year in header.papersByYear %}
+    {{ _self.renderYear(year) }}
+  {% endfor %}
+</section>

@@ -1,8 +1,10 @@
-<article class="mw7 ph3 ph4-ns pv4 mb5 center">
-  <h2 class="lh-title">
-    {{ header.title }}
-  </h2>
-  <div>
+<article class="mw7 ph3 ph4-ns pv6 center">
+  {% if header.showTitle %}
+    <h2 class="lh-title">
+      {{ header.title }}
+    </h2>
+  {% endif %}
+  <div class="modular-text">
     {{ content }}
   </div>
 </article>

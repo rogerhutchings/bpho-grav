@@ -1,5 +1,6 @@
 ---
 title: Resources
+showTitle: true
 date: '10:04 28-09-2017'
 ---
 

@@ -1,0 +1,23 @@
+{% extends 'default.html.twig' %}
+{% from 'macros/triangle.html.twig' import triangle %}
+
+
+{% block main %}
+  {% set parent = page.parent %}
+  {% set navItems = parent.collection() %}
+  {% set modulesOptions = { 'items': '@self.modular' } %}
+  {% set modules = page.collection(modulesOptions) %}
+  <header>
+    {{ triangle('right', 'up', 'washed-blue') }}
+    <div class="bg-washed-blue pa3">
+      <h1 class="ma0 fw2 mw8 center white">
+        {{ parent.title }}
+      </h1>
+      {% include 'past_papers/nav.html.twig' with { pages: navItems } %}
+    </div>
+  </header>
+
+  {% for module in modules %}
+    {{ module.content }}
+  {% endfor %}
+{% endblock main %}

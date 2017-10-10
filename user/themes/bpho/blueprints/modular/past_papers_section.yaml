@@ -1,0 +1,114 @@
+title: Past Papers Section
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          fields:
+
+            showContent:
+              type: section
+              title: Content Visibility
+              underline: true
+              fields:
+
+                header.showTitle:
+                  type: toggle
+                  label: Show Title
+                  default: 0
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
+
+                header.showContent:
+                  type: toggle
+                  label: Show Content
+                  default: 0
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    name:
+                      default: modular/title
+                      '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+
+            overrides:
+              fields:
+                header.template:
+                  default: modular/title
+                  '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+
+        papers:
+          type: tab
+          title: Papers
+          ordering@: 1
+          style: vertical
+          fields:
+
+            header.papersByYear:
+              type: list
+              name: papersByYear
+              style: vertical
+              collapsed: true
+              fields:
+
+                .year:
+                  name: year
+                  type: text
+                  label: Year
+                  validate:
+                    required: true
+
+                .papers:
+                  type: list
+                  name: papers
+                  label: Papers
+                  style: vertical
+                  collapsed: false
+                  fields:
+
+                    .title:
+                      name: title
+                      type: select
+                      label: Title
+                      options:
+                        'Question Paper': 'Question Paper'
+                        'Question Paper Section 1': 'Question Paper Section 1'
+                        'Question Paper Section 2': 'Question Paper Section 2'
+                        'Instructions': 'Instructions'
+                        'Mark Scheme': 'Mark Scheme'
+
+                    .customTitle:
+                      type: text
+                      name: customTitle
+                      label: Custom Title
+                      help: Overrides the Title selection
+
+                    .file:
+                      type: file
+                      label: File
+                      multiple: false
+                      destination: 'self@'
+                      random_name: false
+                      avoid_overwriting: false
+                      limit: 10
+                      filesize: 5
+                      accept:
+                        - '*'
+                      validate:
+                        required: true
