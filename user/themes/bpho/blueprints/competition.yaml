@@ -1,0 +1,50 @@
+title: Competition
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        competition:
+          type: tab
+          title: Competition
+          ordering@: 1
+          fields:
+
+            date:
+              type: section
+              title: Dates
+              underline: true
+              fields:
+                header.competition.examDate:
+                  type: date
+                  label: Exam date
+                header.competition.availableFromDate:
+                  type: date
+                  label: Available from
+                header.competition.entryDeadlineDate:
+                  type: date
+                  label: Entry deadline
+
+            details:
+              type: section
+              title: Exam details
+              underline: true
+              fields:
+                header.competition.length:
+                  type: text
+                  label: Length
+                header.competition.location:
+                  type: text
+                  label: Sat
+                header.competition.marked:
+                  type: text
+                  label: Marked
+                header.competition.cost:
+                  type: text
+                  label: Cost
+                header.competition.prizes:
+                  type: text
+                  label: Prizes

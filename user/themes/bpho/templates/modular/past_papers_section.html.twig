@@ -8,7 +8,6 @@
 {% endmacro renderYear %}
 
 {% macro renderPaper(paper, isLast) %}
-  {{ dump(paper) }}
   <a href="/{{ paper.file|first.path }}">
     {% if paper.customTitle %}
       {{ paper.customTitle }}
