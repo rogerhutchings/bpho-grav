@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -7064,6 +7065,20 @@ a:focus {
 
 .pe-none {
   pointer-events: none; }
+
+.quote {
+  quotes: "“" "”" "‘" "’";
+  position: relative; }
+  .quote:before {
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    vertical-align: -0.4em;
+    position: absolute;
+    left: -3rem;
+    top: 2rem; }
+  .quote p {
+    display: inline; }
 
 .translate-y-0 {
   transform: translateY(0); }

@@ -1,0 +1,11 @@
+{% set quote = page.find(page.header.quote) %}
+{{ dump(quote) }}
+
+<section class="mw7 ph3 ph4-ns pv6 center">
+  <blockquote class="f3 mh0 quote">
+    {{ quote.content }}
+  </blockquote>
+  <div class="tr f4">
+    &ndash; {{ quote.header.source }}
+  </div>
+</section>

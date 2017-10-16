@@ -7,6 +7,8 @@ content:
         custom:
             - _title
             - _intro
+            - _competition-dates
+            - _quote
             - _latest-news
             - _resources
 date: '09:57 28-09-2017'

@@ -22,20 +22,8 @@ form:
 
         content:
           fields:
-
-            showContent:
-              type: section
-              title: Content Visibility
-              underline: true
-              fields:
-
-                header.showTitle:
-                  type: toggle
-                  label: Show Title
-                  default: 0
-                  highlight: 1
-                  options:
-                      1: PLUGIN_ADMIN.YES
-                      0: PLUGIN_ADMIN.NO
-                  validate:
-                      type: bool
+            header.quote:
+              type: parents
+              label: Select quote
+            content:
+              unset@: true
