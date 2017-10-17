@@ -1,7 +1,7 @@
 ---
-title: 'BPhO Past Papers'
+title: 'Past Papers'
 date: '23:43 07-10-2017'
-redirect: /bpho/past-papers/round-1
+redirect: /past-papers/round-1
 child_type: past_papers
 content:
     items: '@self.children'
@@ -12,7 +12,9 @@ content:
             - round-1
             - round-2
             - as-competition
-            - experimental-project-gcse
+            - experimental-project
+            - physics-challenge-gcse
+            - baao
             - null
 ---
 

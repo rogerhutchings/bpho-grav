@@ -23,14 +23,15 @@
 {% endmacro renderPaper %}
 
 <section>
+  {{ dump(page) }}
   {% if header.showTitle %}
     <h2>
-      {{ title }}
+      {{ header.title }}
     </h2>
   {% endif %}
 
   {% if header.showContent %}
-    {{ section }}
+    {{ content }}
   {% endif %}
 
   {% for year in header.papersByYear %}
