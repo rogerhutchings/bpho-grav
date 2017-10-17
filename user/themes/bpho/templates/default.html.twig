@@ -4,6 +4,11 @@
   <main id="main" class="bg-dark-gray ph3 pv3 pv5-ns">
     {% block main_content %}
       <article class="mw7 ph3 ph4-ns pv4 mh2 center bg-white">
+
+        {% if config.plugins.breadcrumbs.enabled %}
+  				{% include 'partials/breadcrumbs.html.twig' %}
+  			{% endif %}
+
         {% block title %}
           <h1 class="lh-title fw3 mb5">
             {{ header.title }}
