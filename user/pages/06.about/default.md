@@ -1,5 +1,6 @@
 ---
 title: 'About Us'
+menu: About
 ---
 
 The British Physics Olympiad is a charitable trust overseen by a committee of trustees. On a day to day basis the BPhO is run by five committee members and run by a large team of volunteer physics teachers and academics from across the country.
