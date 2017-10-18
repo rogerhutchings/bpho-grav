@@ -1,6 +1,6 @@
 ---
 title: Quote
-quote: /Quotes/quote
+quote: /quotes/quote
 date: '13:10 16-10-2017'
 ---
 
