@@ -21,12 +21,20 @@ form:
                 header.competition.examDate:
                   type: date
                   label: Exam date
+                  toggleable: true
                 header.competition.availableFromDate:
                   type: date
                   label: Available from
+                  toggleable: true
                 header.competition.entryDeadlineDate:
                   type: date
                   label: Entry deadline
+                  toggleable: true
+                header.competition.certificatesDeadlineDate:
+                  type: date
+                  label: Certificates ordering deadline
+                  toggleable: true
+
 
             details:
               type: section
