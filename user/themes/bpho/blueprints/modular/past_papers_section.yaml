@@ -79,7 +79,7 @@ form:
                   name: papers
                   label: Papers
                   style: vertical
-                  collapsed: false
+                  collapsed: true
                   fields:
 
                     .title:
@@ -101,14 +101,13 @@ form:
 
                     .file:
                       type: file
-                      label: File
+                      label: A Label
                       multiple: false
                       destination: 'self@'
                       random_name: false
-                      avoid_overwriting: false
-                      limit: 10
-                      filesize: 5
+                      avoid_overwriting: true
+                      limit: 0
                       accept:
-                        - '*'
-                      validate:
-                        required: true
+                        - .pdf
+                        - .doc
+                        - .docx

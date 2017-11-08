@@ -1,13 +1,35 @@
 {% macro renderYear(year) %}
-  <h3>
-    {{ year.year }}
-    {% for paper in year.papers %}
-      {{ _self.renderPaper(paper, loop.last) }}
-    {% endfor %}
-  </h3>
+  <section class="flex-ns flex-row justify-start">
+    <h3 class="w4-ns mt0">
+      {{ year.year }}
+    </h3>
+    <ul class="pl0 list f4 mt0 flex-auto-ns">
+      {% for paper in year.papers %}
+        <li>
+          {{ _self.renderPaper(paper) }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 {% endmacro renderYear %}
 
-{% macro renderPaper(paper, isLast) %}
+{% macro renderPaper(paper) %}
+  {% set fileTypes = {
+    'application/pdf': {
+      icon: 'fa-file-pdf-o',
+      title: 'pdf'
+    },
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document': {
+      icon: 'fa-file-word-o',
+      title: 'docx'
+    },
+    'application/msword': {
+    icon: 'fa-file-word-o',
+    title: 'doc'
+    }
+  } %}
+  {% set fileType = fileTypes[paper.file|first.type] %}
+
   <a href="/{{ paper.file|first.path }}">
     {% if paper.customTitle %}
       {{ paper.customTitle }}
@@ -15,26 +37,24 @@
       {{ paper.title }}
     {% endif %}
   </a>
-  {% if isLast == false %}
-    <span>
-      &ndash;
-    </span>
+  {% if fileType %}
+    <span class="ml2 mr1 f6 ttu">{{ fileType.title }}</span>
+    <i class="fa {{ fileType.icon }} gray" aria-hidden="true"></i>
   {% endif %}
 {% endmacro renderPaper %}
 
-<section>
-  {{ dump(page) }}
-  {% if header.showTitle %}
+<div>
+  {% if page.header.showTitle %}
     <h2>
-      {{ header.title }}
+      {{ page.header.title }}
     </h2>
   {% endif %}
 
-  {% if header.showContent %}
+  {% if page.header.showContent %}
     {{ content }}
   {% endif %}
 
-  {% for year in header.papersByYear %}
+  {% for year in page.header.papersByYear %}
     {{ _self.renderYear(year) }}
   {% endfor %}
-</section>
+</div>

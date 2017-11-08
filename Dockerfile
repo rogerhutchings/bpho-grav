@@ -21,6 +21,8 @@ RUN touch /etc/service/php-fpm/run
 RUN chmod +x /etc/service/php-fpm/run
 RUN echo '#!/bin/bash \n\
     exec /usr/sbin/php-fpm7.0 -F' >> /etc/service/php-fpm/run
+RUN sed -i 's|upload_max_filesize = 2M|upload_max_filesize = 5M|' \
+        /etc/php/7.0/fpm/php.ini
 
 # Setup Nginx service
 RUN mkdir -p /etc/service/nginx
@@ -76,6 +78,8 @@ RUN /etc/nginx/grav_conf.sh
 RUN sed -i \
         -e 's|root /home/USER/www/html|root   /usr/share/nginx/html|' \
         -e 's|unix:/var/run/php5-fpm.sock;|unix:/run/php/php7.0-fpm.sock;|' \
+    /etc/nginx/sites-available/default
+RUN sed -i '/## End - Server Info/i\   client_max_body_size 5M;' \
     /etc/nginx/sites-available/default
 
 # Expose configuration and content volumes
