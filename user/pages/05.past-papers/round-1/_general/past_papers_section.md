@@ -89,7 +89,7 @@ papersByYear:
                 file: { user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section1.pdf: { name: BBPhO_2012_Round_1_section1.pdf, type: application/pdf, size: 676816, path: user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section1.pdf } }
             -
                 title: 'Question Paper Section 2'
-                file: { 'user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section2 final.pdf': { name: 'BBPhO_2012_Round_1_section2 final.pdf', type: application/pdf, size: 750554, path: 'user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section2 final.pdf' } }
+                file: { 'user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section2_final.pdf': { name: 'BBPhO_2012_Round_1_section2_final.pdf', type: application/pdf, size: 750554, path: 'user/pages/05.past-papers/round-1/_general/BBPhO_2012_Round_1_section2_final.pdf' } }
             -
                 title: 'Mark Scheme'
                 file: { user/pages/05.past-papers/round-1/_general/BPhO_2012_Round_1_Solutions.pdf: { name: BPhO_2012_Round_1_Solutions.pdf, type: application/pdf, size: 1343538, path: user/pages/05.past-papers/round-1/_general/BPhO_2012_Round_1_Solutions.pdf } }
@@ -197,4 +197,3 @@ papersByYear:
                 file: { user/pages/05.past-papers/round-1/_general/BPhO_Paper2_2002_MS.pdf: { name: BPhO_Paper2_2002_MS.pdf, type: application/pdf, size: 1716119, path: user/pages/05.past-papers/round-1/_general/BPhO_Paper2_2002_MS.pdf } }
 date: '17:50 09-10-2017'
 ---
-

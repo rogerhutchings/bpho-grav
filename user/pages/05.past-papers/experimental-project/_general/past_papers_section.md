@@ -23,7 +23,7 @@ papersByYear:
             -
                 title: 'Question Paper'
                 customTitle: 'Project Brief'
-                file: { 'user/pages/05.past-papers/experimental-project/_general/BPhO_EXPERIMENTAL_PAPER_2014 .pdf': { name: 'BPhO_EXPERIMENTAL_PAPER_2014 .pdf', type: application/pdf, size: 341883, path: 'user/pages/05.past-papers/experimental-project/_general/BPhO_EXPERIMENTAL_PAPER_2014 .pdf' } }
+                file: { 'user/pages/05.past-papers/experimental-project/_general/BPhO_EXPERIMENTAL_PAPER_2014.pdf': { name: 'BPhO_EXPERIMENTAL_PAPER_2014.pdf', type: application/pdf, size: 341883, path: 'user/pages/05.past-papers/experimental-project/_general/BPhO_EXPERIMENTAL_PAPER_2014.pdf' } }
     -
         year: 2013-14
         papers:
@@ -51,7 +51,7 @@ papersByYear:
             -
                 title: 'Question Paper'
                 customTitle: 'Project Brief'
-                file: { 'user/pages/05.past-papers/experimental-project/_general/SIMPLE_PENDULUM _5_.pdf': { name: 'SIMPLE_PENDULUM _5_.pdf', type: application/pdf, size: 22983, path: 'user/pages/05.past-papers/experimental-project/_general/SIMPLE_PENDULUM _5_.pdf' } }
+                file: { 'user/pages/05.past-papers/experimental-project/_general/SIMPLE_PENDULUM_5_.pdf': { name: 'SIMPLE_PENDULUM_5_.pdf', type: application/pdf, size: 22983, path: 'user/pages/05.past-papers/experimental-project/_general/SIMPLE_PENDULUM_5_.pdf' } }
     -
         year: 2008-09
         papers:
