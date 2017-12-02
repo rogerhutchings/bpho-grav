@@ -23,11 +23,8 @@ function initTopHero() {
   resizers.each(setHeight);
   resizers.children('.js-dn').removeClass('js-dn');
 
-  $(window).resize(function () {
-    $.throttle(resizers.each(setHeight), 100);
-  });
-
-
+  $(window).resize(() =>
+    $.throttle(resizers.each(setHeight), 100));
 }
 
 $(document).ready(initTopHero);

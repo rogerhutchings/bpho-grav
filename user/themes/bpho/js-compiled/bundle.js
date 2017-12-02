@@ -127,9 +127,29 @@ function initNav() {
   var openMenu = $('.js-open-menu');
   var closeMenu = $('.js-close-menu');
   var nav = $('.js-nav');
+  var navItems = $('.js-nav-items');
   var header = $('.js-header');
 
   var MENU_TRANSITION = 200;
+  var MIN_WIDTH = 700;
+
+  function setNavHeight() {
+    var isNarrow = header.outerWidth() < MIN_WIDTH;
+
+    var navHeight = isNarrow ? 'auto' : header.height();
+    nav.height(navHeight);
+
+    if (isNarrow) {
+      navItems.addClass('flex-column').removeClass('flex-row');
+    } else {
+      navItems.addClass('flex-row').removeClass('flex-column');
+    }
+  }
+
+  setNavHeight();
+  $(window).resize(function () {
+    return $.throttle(setNavHeight(), 200);
+  });
 
   nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
 
@@ -145,8 +165,7 @@ function initNav() {
     nav.addClass('translate-y--100');
     openMenu.removeClass('is-active');
     setTimeout(function () {
-      // closeMenu.removeClass('is-active');
-      closeMenu.removeClass('is-active');
+      return closeMenu.removeClass('is-active');
     }, MENU_TRANSITION);
   });
 }
@@ -186,7 +205,7 @@ function initTopHero() {
   resizers.children('.js-dn').removeClass('js-dn');
 
   $(window).resize(function () {
-    $.throttle(resizers.each(setHeight), 100);
+    return $.throttle(resizers.each(setHeight), 100);
   });
 }
 
