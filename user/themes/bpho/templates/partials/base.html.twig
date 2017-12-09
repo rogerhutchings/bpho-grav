@@ -1,5 +1,7 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% from 'macros/menu-button.html.twig' import menuButton  %}
+{% from 'macros/home-button.html.twig' import homeButton  %}
+{% from 'macros/close-button.html.twig' import closeButton  %}
 
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
@@ -39,8 +41,14 @@
   <body id="top" class="{{ page.header.body_classes }} nunito fw2 lh-copy">
 
     {% block header %}
-      <header id="header" class="js-header z-1 bg-white relative ph4 pv4 flex justify-between">
-        {{ menuButton({ jsClass: 'js-open-menu' }) }}
+      <header
+        id="header"
+        class="js-header z-1 bg-white relative ph4 pv4 flex justify-between"
+      >
+        <div class="flex justify-start items-center">
+          {{ homeButton() }}
+          {{ menuButton() }}
+        </div>
 
         {% include 'partials/navigation.html.twig' %}
 

@@ -13,15 +13,13 @@
   "author": "Roger Hutchings <roger@hutchin.gs> (https://www.rogerhutchin.gs/)",
   "license": "Apache-2.0",
   "dependencies": {
-    "hamburgers": "^0.9.1",
-    "node-sass": "^4.5.3",
+    "node-sass": "^4.7.2",
     "tachyons-sass": "^4.7.1"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.5.2",
-    "node-sass": "^4.5.3",
     "webpack": "^2.0.0"
   }
 }

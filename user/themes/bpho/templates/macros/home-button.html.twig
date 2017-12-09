@@ -1,0 +1,15 @@
+{% macro homeButton(args) %}
+  {% set theme = args.theme|default('dark') %}
+  {% set hover = (theme == 'dark') ? 'hover-black' : 'hover-white' %}
+
+  <a
+    href="/"
+    class="flex justify-center no-underline-hover gray {{ hover }}"
+  >
+    <i
+      class="fal fa-fw fa-home mr3"
+      aria-hidden="true"
+      style="font-size: 20px;"
+    ></i>
+  </a>
+{% endmacro homeButton %}

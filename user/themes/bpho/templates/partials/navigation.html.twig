@@ -1,4 +1,5 @@
-{% from 'macros/menu-button.html.twig' import menuButton  %}
+{% from 'macros/home-button.html.twig' import homeButton  %}
+{% from 'macros/close-button.html.twig' import closeButton  %}
 
 {% set buttonOptions = {
   jsClass: 'js-close-menu',
@@ -25,8 +26,9 @@
 {% endmacro %}
 
 <nav class="js-nav js-dn bg-navy white ph4 pv4 w-100 border-box flex justify-center">
-  <div class="absolute left-2 top-50 translate-y-center">
-    {{ menuButton(buttonOptions) }}
+  <div class="absolute left-2 top-50 translate-y-center flex justify-start items-center">
+    {{ homeButton({ theme: 'light' }) }}
+    {{ closeButton() }}
   </div>
   <div class="js-nav-items flex">
     <ul class="list pl0 ma0 flex flex-column items-center">

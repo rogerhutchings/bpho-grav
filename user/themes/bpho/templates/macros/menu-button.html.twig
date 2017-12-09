@@ -1,19 +1,7 @@
-{% macro menuButton(args) %}
-  {% set classes = args.classes|default('') %}
-  {% set hamburgerType = args.hamburgerType|default('hamburger--squeeze') %}
-  {% set jsClass = args.jsClass|default('') %}
-  {% set text = args.text|default('Menu') %}
-  {% set textColor = args.textColor|default('black') %}
-
-  <button
-    class="{{ jsClass }} {{ textColor }} hamburger {{ hamburgerType }} {{ classes }}"
-    type="button"
-  >
-    <span class="hamburger-box v-mid">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="v-mid ml2">
-      {{ text }}
-    </span>
-  </button>
+{% macro menuButton() %}
+  <i
+    class="fal fa-fw fa-bars gray mr3 pointer hover-black js-open-menu"
+    aria-hidden="true"
+    style="font-size: 20px;"
+  ></i>
 {% endmacro menuButton %}
