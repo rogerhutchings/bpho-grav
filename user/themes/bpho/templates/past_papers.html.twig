@@ -17,13 +17,15 @@
     </div>
   </header>
 
-  <article class="mw7 ph3 ph4-ns pv4 mh2 center">
-    <h1>
-      {{ header.title }}
-    </h1>
+  <div class="bg-near-white">
+    <article class="mw6 ph3 ph4-ns pv4 mh2 center">
+      <h1>
+        {{ header.title }}
+      </h1>
 
-    {% for module in page.collection %}
-      {{ module.content }}
-    {% endfor %}
-  </article>
+      {% for module in page.collection %}
+        {{ module.content }}
+      {% endfor %}
+    </article>
+  </div>
 {% endblock main %}

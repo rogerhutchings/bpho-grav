@@ -24,11 +24,13 @@
   {% endfor %}
 {% endmacro %}
 
-<nav class="js-nav js-dn bg-navy white ph4 pv4 w-100 flex justify-center">
+<nav class="js-nav js-dn bg-navy white ph4 pv4 w-100 border-box flex justify-center">
   <div class="absolute left-2 top-50 translate-y-center">
     {{ menuButton(buttonOptions) }}
   </div>
-  <ul class="js-nav-items list pl0 ma0 flex flex-column items-center">
-    {{ _self.loop(pages) }}
-  </ul>
+  <div class="js-nav-items flex">
+    <ul class="list pl0 ma0 flex flex-column items-center">
+      {{ _self.loop(pages) }}
+    </ul>
+  </div>
 </nav>

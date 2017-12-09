@@ -140,9 +140,9 @@ function initNav() {
     nav.height(navHeight);
 
     if (isNarrow) {
-      navItems.addClass('flex-column').removeClass('flex-row');
+      navItems.find('ul').addClass('flex-column').removeClass('flex-row');
     } else {
-      navItems.addClass('flex-row').removeClass('flex-column');
+      navItems.find('ul').addClass('flex-row').removeClass('flex-column');
     }
   }
 

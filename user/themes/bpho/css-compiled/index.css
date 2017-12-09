@@ -1001,7 +1001,7 @@ img {
   border-color: #111; }
 
 .b--dark-gray {
-  border-color: #545462; }
+  border-color: #3C3546; }
 
 .b--mid-gray {
   border-color: #9897A5; }
@@ -1022,7 +1022,7 @@ img {
   border-color: #eee; }
 
 .b--near-white {
-  border-color: #f4f4f4; }
+  border-color: #F0F3F9; }
 
 .b--white {
   border-color: #fff; }
@@ -3806,7 +3806,7 @@ a:visited {
   color: #111; }
 
 .dark-gray {
-  color: #545462; }
+  color: #3C3546; }
 
 .mid-gray {
   color: #9897A5; }
@@ -3827,7 +3827,7 @@ a:visited {
   color: #eee; }
 
 .near-white {
-  color: #f4f4f4; }
+  color: #F0F3F9; }
 
 .white {
   color: #fff; }
@@ -3975,7 +3975,7 @@ a:visited {
   background-color: #111; }
 
 .bg-dark-gray {
-  background-color: #545462; }
+  background-color: #3C3546; }
 
 .bg-mid-gray {
   background-color: #9897A5; }
@@ -3996,7 +3996,7 @@ a:visited {
   background-color: #eee; }
 
 .bg-near-white {
-  background-color: #f4f4f4; }
+  background-color: #F0F3F9; }
 
 .bg-white {
   background-color: #fff; }
@@ -4100,7 +4100,7 @@ a:visited {
 
 .hover-dark-gray:hover,
 .hover-dark-gray:focus {
-  color: #545462; }
+  color: #3C3546; }
 
 .hover-mid-gray:hover,
 .hover-mid-gray:focus {
@@ -4128,7 +4128,7 @@ a:visited {
 
 .hover-near-white:hover,
 .hover-near-white:focus {
-  color: #f4f4f4; }
+  color: #F0F3F9; }
 
 .hover-white:hover,
 .hover-white:focus {
@@ -4220,7 +4220,7 @@ a:visited {
 
 .hover-bg-dark-gray:hover,
 .hover-bg-dark-gray:focus {
-  background-color: #545462; }
+  background-color: #3C3546; }
 
 .hover-bg-mid-gray:hover,
 .hover-bg-mid-gray:focus {
@@ -4248,7 +4248,7 @@ a:visited {
 
 .hover-bg-near-white:hover,
 .hover-bg-near-white:focus {
-  background-color: #f4f4f4; }
+  background-color: #F0F3F9; }
 
 .hover-bg-white:hover,
 .hover-bg-white:focus {
@@ -6079,7 +6079,7 @@ a:visited {
   background-color: #eee; }
 
 .striped--near-white:nth-child(odd) {
-  background-color: #f4f4f4; }
+  background-color: #F0F3F9; }
 
 .stripe-light:nth-child(odd) {
   background-color: rgba(255, 255, 255, 0.1); }
@@ -6949,7 +6949,7 @@ a:focus {
   fill: #111; }
 
 .f-dark-gray {
-  fill: #545462; }
+  fill: #3C3546; }
 
 .f-mid-gray {
   fill: #9897A5; }
@@ -6970,7 +6970,7 @@ a:focus {
   fill: #eee; }
 
 .f-near-white {
-  fill: #f4f4f4; }
+  fill: #F0F3F9; }
 
 .f-white {
   fill: #fff; }

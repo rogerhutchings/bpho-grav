@@ -17,11 +17,11 @@ function initNav() {
     nav.height(navHeight);
 
     if (isNarrow) {
-      navItems
+      navItems.find('ul')
         .addClass('flex-column')
         .removeClass('flex-row');
     } else {
-      navItems
+      navItems.find('ul')
         .addClass('flex-row')
         .removeClass('flex-column');
     }
