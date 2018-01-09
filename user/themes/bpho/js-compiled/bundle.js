@@ -2976,38 +2976,35 @@ function initNavHeight() {
   });
 }
 
+$(document).ready(initNavHeight);
+
 function initNavToggle() {
-  var openMenuButton = $('.js-open-menu');
-  var closeMenuButton = $('.js-close-menu');
+  var header = $('.js-header');
   var nav = $('.js-nav');
 
   var MENU_TRANSITION = 200;
 
   function openNav() {
     nav.removeClass('translate-y--100');
-    closeMenuButton.one('click', closeNav);
   }
 
   function closeNav() {
     nav.addClass('translate-y--100');
-    openMenuButton.one('click', openNav);
   }
 
   nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
 
-  openMenuButton.one('click', openNav);
+  header.on('click', function (event) {
+    var classes = event.target.className.baseVal || false;
+    if (classes && classes.indexOf('js-open-menu') > -1) {
+      openNav();
+    } else if (classes && classes.indexOf('js-close-menu') > -1) {
+      closeNav();
+    }
+  });
 }
 
-$(document).ready(function () {
-  initNavHeight();
-});
-
-// We use load() here so that FontAwesome has time to finish manipulating the
-// DOM and we therefore get the right elements to attach our click event
-// listeners to.
-$(window).load(function () {
-  initNavToggle();
-});
+$(window).ready(initNavToggle);
 
 /***/ }),
 /* 6 */
