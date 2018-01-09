@@ -3,5 +3,5 @@ show_all: true
 built_in_css: false
 include_home: true
 icon_home: ''
-icon_divider_classes: 'fa fa-angle-right'
+icon_divider_classes: 'fal fa-angle-right'
 link_trailing: false

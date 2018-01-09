@@ -3,15 +3,11 @@
 {% set divider = breadcrumbs_config.icon_divider_classes %}
 
 {% macro crumbTitle(crumb) %}
-  <span itemprop="title">
-    {{ crumb.menu }}
-  </span>
+  <span itemprop="title">{{ crumb.menu }}</span>
 {% endmacro crumbTitle %}
 
 {% macro crumbLink(crumb) %}
-  <a href="{{ crumb.url }}" itemprop="url">
-    {{ _self.crumbTitle(crumb) }}
-  </a>
+  <a href="{{ crumb.url }}" itemprop="url">{{ _self.crumbTitle(crumb) }}</a>
 {% endmacro crumbLink %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
