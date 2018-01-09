@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1208,152 +1208,6 @@ $(document).ready(initFaqs);
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-function initHeader() {
-  var header = $('.js-header');
-
-  header.stick_in_parent();
-}
-
-$(document).ready(initHeader);
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-// Resizes the nav bar to the same height as the header.
-function initNavHeight() {
-  var nav = $('.js-nav');
-  var navItems = $('.js-nav-items');
-  var header = $('.js-header');
-
-  // The width at which the nav items start to hit the buttons.
-  var MIN_WIDTH = 700;
-
-  function setNavHeight() {
-    var isNarrow = header.outerWidth() < MIN_WIDTH;
-    var navHeight = isNarrow ? 'auto' : header.height();
-
-    nav.height(navHeight);
-
-    if (isNarrow) {
-      navItems.find('ul').addClass('flex-column').removeClass('flex-row');
-    } else {
-      navItems.find('ul').addClass('flex-row').removeClass('flex-column');
-    }
-  }
-
-  setNavHeight();
-  $(window).resize(function () {
-    return $.throttle(setNavHeight(), 200);
-  });
-}
-
-function initNavToggle() {
-  var openMenuButton = $('.js-open-menu');
-  var closeMenuButton = $('.js-close-menu');
-  var nav = $('.js-nav');
-
-  var MENU_TRANSITION = 200;
-
-  function openNav() {
-    nav.removeClass('translate-y--100');
-    closeMenuButton.one('click', closeNav);
-  }
-
-  function closeNav() {
-    nav.addClass('translate-y--100');
-    openMenuButton.one('click', openNav);
-  }
-
-  nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
-
-  openMenuButton.one('click', openNav);
-}
-
-$(document).ready(function () {
-  initNavHeight();
-});
-
-// We use load() here so that FontAwesome has time to finish manipulating the
-// DOM and we therefore get the right elements to attach our click event
-// listeners to.
-$(window).load(function () {
-  initNavToggle();
-});
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/*
-
-  TOP HERO resizer
-
-  Looks for a hero element at the top of the page (designated by class), and
-  resizes it to fill the viewport space minus the nav height.
-
- */
-
-function initTopHero() {
-  var resizers = $('.js-top-hero');
-
-  if (!resizers.length) {
-    return false;
-  }
-
-  function setHeight(el) {
-    var navHeight = $('#header').outerHeight();
-    var windowHeight = $(window).height();
-    $(this).height(windowHeight - navHeight);
-  }
-
-  resizers.each(setHeight);
-  resizers.children('.js-dn').removeClass('js-dn');
-
-  $(window).resize(function () {
-    return $.throttle(resizers.each(setHeight), 100);
-  });
-}
-
-$(document).ready(initTopHero);
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-__webpack_require__(2);
-
-__webpack_require__(8);
-
-__webpack_require__(0);
-
-__webpack_require__(1);
-
-__webpack_require__(3);
-
-__webpack_require__(4);
-
-__webpack_require__(5);
-
-$('html').addClass('js');
-
-/***/ }),
-/* 7 */,
-/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3071,6 +2925,151 @@ $('html').addClass('js');
 
   bunker(bootstrap);
 })();
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function initHeader() {
+  var header = $('.js-header');
+
+  header.stick_in_parent();
+}
+
+$(document).ready(initHeader);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Resizes the nav bar to the same height as the header.
+function initNavHeight() {
+  var nav = $('.js-nav');
+  var navItems = $('.js-nav-items');
+  var header = $('.js-header');
+
+  // The width at which the nav items start to hit the buttons.
+  var MIN_WIDTH = 700;
+
+  function setNavHeight() {
+    var isNarrow = header.outerWidth() < MIN_WIDTH;
+    var navHeight = isNarrow ? 'auto' : header.height();
+
+    nav.height(navHeight);
+
+    if (isNarrow) {
+      navItems.find('ul').addClass('flex-column').removeClass('flex-row');
+    } else {
+      navItems.find('ul').addClass('flex-row').removeClass('flex-column');
+    }
+  }
+
+  setNavHeight();
+  $(window).resize(function () {
+    return $.throttle(setNavHeight(), 200);
+  });
+}
+
+function initNavToggle() {
+  var openMenuButton = $('.js-open-menu');
+  var closeMenuButton = $('.js-close-menu');
+  var nav = $('.js-nav');
+
+  var MENU_TRANSITION = 200;
+
+  function openNav() {
+    nav.removeClass('translate-y--100');
+    closeMenuButton.one('click', closeNav);
+  }
+
+  function closeNav() {
+    nav.addClass('translate-y--100');
+    openMenuButton.one('click', openNav);
+  }
+
+  nav.removeClass('js-dn').addClass('db absolute top-0 left-0 tr-translate translate-y--100');
+
+  openMenuButton.one('click', openNav);
+}
+
+$(document).ready(function () {
+  initNavHeight();
+});
+
+// We use load() here so that FontAwesome has time to finish manipulating the
+// DOM and we therefore get the right elements to attach our click event
+// listeners to.
+$(window).load(function () {
+  initNavToggle();
+});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+
+  TOP HERO resizer
+
+  Looks for a hero element at the top of the page (designated by class), and
+  resizes it to fill the viewport space minus the nav height.
+
+ */
+
+function initTopHero() {
+  var resizers = $('.js-top-hero');
+
+  if (!resizers.length) {
+    return false;
+  }
+
+  function setHeight(el) {
+    var navHeight = $('#header').outerHeight();
+    var windowHeight = $(window).height();
+    $(this).height(windowHeight - navHeight);
+  }
+
+  resizers.each(setHeight);
+  resizers.children('.js-dn').removeClass('js-dn');
+
+  $(window).resize(function () {
+    return $.throttle(resizers.each(setHeight), 100);
+  });
+}
+
+$(document).ready(initTopHero);
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(2);
+
+__webpack_require__(3);
+
+__webpack_require__(0);
+
+__webpack_require__(1);
+
+__webpack_require__(4);
+
+__webpack_require__(5);
+
+__webpack_require__(6);
+
+$('html').addClass('js');
 
 /***/ })
 /******/ ]);
