@@ -1183,7 +1183,7 @@ function initFaqs() {
   var answers = $('.js-faq-answer');
   var questions = $('.js-faq-question');
 
-  questions.addClass('pointer dim').append('<i class="fa fa-angle-down pe-none" aria-hidden="true"></i>');
+  questions.addClass('pointer dim').append('<i class="fal fa-angle-down pe-none" aria-hidden="true"></i>');
 
   answers.removeClass('js-dn').hide();
 
@@ -1194,11 +1194,10 @@ function toggleFaqState(_ref) {
   var target = _ref.target;
 
   var question = $(target);
-  var arrow = question.children('.fa');
+  var arrow = question.children('.fal');
   var isOpen = question.data('is-open');
-  var rotation = isOpen ? '0deg' : '-180deg';
-
-  arrow.transition({ rotate: rotation });
+  // const rotation = (isOpen) ? '0deg' : '-180deg';
+  // arrow.css('transform', `rotate(${rotation})`);
   $(target).siblings().slideToggle(200);
   question.data('is-open', !isOpen);
   return false;
