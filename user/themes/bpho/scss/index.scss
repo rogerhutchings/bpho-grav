@@ -1,4 +1,9 @@
-@import 'tachyons/colors';
+// Set the base font size to 19px
+html {
+  font-size: 118.75%;
+}
+
+@import 'tachyons/variables';
 
 @import '../node_modules/tachyons-sass/tachyons';
 
@@ -7,6 +12,7 @@
 @import 'tachyons/fills';
 @import 'tachyons/hovers';
 @import 'tachyons/links';
+@import 'tachyons/min-width';
 @import 'tachyons/nunito';
 @import 'tachyons/pointer-events';
 @import 'tachyons/quotes';

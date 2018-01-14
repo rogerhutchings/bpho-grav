@@ -1,17 +1,7 @@
-{% set defaultClasses = 'f6 link ph3 pv2 mb2 mh3 dib no-underline-hover bg-animate' %}
-
-{% set color = color|default('white') %}
-{% set bgColor = bgColor|default('bg-black') %}
-{% set hoverColor = hoverColor|default("hover-#{bgColor[3:]}") %}
-{% set hoverBgColor = hoverBgColor|default("hover-bg-#{color}") %}
-{% set colors = [color, bgColor, hoverColor, hoverBgColor]|join(' ') %}
-
-{% set url = url|default('#') %}
-
-{% set text = text|default('Button Text') %}
+{% set defaultClasses = 'f6 fw1 ba minw5 link ph3 pv2 mb2 mh3 dib no-underline-hover white bg-transparent hover-dark-blue hover-bg-white' %}
 
 <a
-  class="{{ defaultClasses }} {{ colors }} {{ classes }} "
+  class="{{ defaultClasses }}"
   href="{{ url }}"
 >
   {{ text }}
