@@ -1,16 +1,15 @@
 {% extends 'default.html.twig' %}
-{% from 'macros/triangle.html.twig' import triangle %}
-
 
 {% block main %}
+
   {% set parent = page.parent %}
   {% set navItems = parent.collection() %}
   {% set modulesOptions = { 'items': '@self.modular' } %}
   {% set modules = page.collection(modulesOptions) %}
-  <header>
-    {{ triangle('right', 'up', 'washed-blue') }}
-    <div class="bg-washed-blue pa3">
-      <h1 class="ma0 fw2 mw8 center white">
+
+  <header class="bg-dark-gray pa4 pt5 flex justify-center bg-feynman bg-60 bg-y--6">
+    <div>
+      <h1 class="ma0 f3 fw2 white">
         {{ parent.title }}
       </h1>
       {% include 'past_papers/nav.html.twig' with { pages: navItems } %}
@@ -19,7 +18,7 @@
 
   <div class="bg-near-white">
     <article class="mw6 ph3 ph4-ns pv4 mh2 center">
-      <h1>
+      <h1 class="f3">
         {{ header.title }}
       </h1>
 
@@ -28,4 +27,5 @@
       {% endfor %}
     </article>
   </div>
+
 {% endblock main %}

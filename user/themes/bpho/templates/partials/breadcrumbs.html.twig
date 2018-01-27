@@ -11,7 +11,7 @@
 {% endmacro crumbLink %}
 
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-  <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+  <div class="f6" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
 
     {% if breadcrumbs_config.icon_home %}
       <i class="{{ breadcrumbs_config.icon_home }}"></i>

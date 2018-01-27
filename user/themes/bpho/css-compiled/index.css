@@ -6308,7 +6308,12 @@ a:visited {
 .f4 {
   font-size: 1.25rem; }
 
-.f5 {
+.f5, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1rem; }
 
 .f6 {
@@ -6942,6 +6947,12 @@ a:focus {
 .bg-top-center {
   background-position: top center; }
 
+.bg-60 {
+  background-size: 60rem; }
+
+.bg-y--6 {
+  background-position-y: -6rem; }
+
 .top-50 {
   top: 50%; }
 
@@ -7055,6 +7066,12 @@ a:focus {
 
 .f-fill-inherit {
   fill: inherit; }
+
+.h-logo {
+  height: 3rem; }
+
+.h-feynmann {
+  height: 32rem; }
 
 .no-underline-hover:hover {
   text-decoration: none; }
@@ -7224,6 +7241,44 @@ a:focus {
 
 .translate-y-center {
   transform: translateY(-50%); }
+
+/*
+   WIDTHS
+   Docs: http://tachyons.io/docs/layout/widths/
+   Base:
+     w = width
+     Modifiers
+       6 = 6th step in width scale
+       7 = 7th step in width scale
+     Media Query Extensions:
+       -ns = not-small
+       -m  = medium
+       -l  = large
+  */
+/* Width Scale */
+.w6 {
+  width: 32rem; }
+
+.w7 {
+  width: 48rem; }
+
+@media screen and (min-width: 30em) {
+  .w6-ns {
+    width: 32rem; }
+  .w7-ns {
+    width: 48rem; } }
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  .w6-m {
+    width: 32rem; }
+  .w7-m {
+    width: 48rem; } }
+
+@media screen and (min-width: 60em) {
+  .w6-l {
+    width: 32rem; }
+  .w7-l {
+    width: 48rem; } }
 
 .notices.yellow {
   border-left: 10px solid #f0ad4e;

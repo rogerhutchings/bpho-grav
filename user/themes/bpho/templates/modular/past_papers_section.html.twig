@@ -1,9 +1,9 @@
 {% macro renderYear(year) %}
   <section class="flex-ns flex-row justify-start">
-    <h3 class="w4-ns mt0">
+    <h3 class="w4-ns mt0 f5">
       {{ year.year }}
     </h3>
-    <ul class="pl0 list f4 mt0 flex-auto-ns">
+    <ul class="pl0 list f5 mt0 flex-auto-ns">
       {% for paper in year.papers %}
         <li>
           {{ _self.renderPaper(paper) }}

@@ -9,7 +9,7 @@
     <ul class="list pl0 ma0">
 
       {% for post in posts %}
-        <li class="bt b--moon-gray flex pt3 mb4">
+        <li class="bt b--moon-gray flex pt2 mb3">
 
           <time class="db w-20" datetime="{{ post.date|date("c") }}">
             <span class="f2 db lh-solid">
@@ -21,10 +21,10 @@
           </time>
 
           <div class="w-80">
-            <a href="{{ post.url }}" class="db black underline-hover f4">
+            <a href="{{ post.url }}" class="db black underline-hover">
               {{ post.title }}
             </a>
-            <a href="{{ post.url }}" class="db tr underline-hover fw2">
+            <a href="{{ post.url }}" class="db tr mt2 underline-hover fw2">
               Read more...
             </a>
           </div>
