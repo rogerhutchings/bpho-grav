@@ -6938,6 +6938,9 @@ a:focus {
   Add custom styles here.
 
 */
+.instant {
+  transition-duration: 0s !important; }
+
 .bg-feynman {
   background-image: url("../images/background.png"); }
 
