@@ -6938,6 +6938,13 @@ a:focus {
   Add custom styles here.
 
 */
+.anim-down-hover {
+  padding-top: 1rem; }
+  .anim-down-hover svg {
+    transition: 1s ease-in-out; }
+  .anim-down-hover:hover svg {
+    transform: translateY(1rem); }
+
 .instant {
   transition-duration: 0s !important; }
 
