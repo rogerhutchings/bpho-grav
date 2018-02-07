@@ -1,0 +1,12 @@
+state: enabled
+email: Lena.Shams@physics.ox.ac.uk
+fullname: 'Lena Shams'
+language: en
+twofa_enabled: false
+twofa_secret: V5266OYYI5EH25KTODQXMPPLSOAMRG3J
+access:
+  admin: {  }
+  admin-addon-user-manager: {  }
+hashed_password: $2y$10$dnVCTpo75r0VKEeaBbuSE.eW05DX5wPJ.VSAKmRJeTLbaBUkM0fVi
+groups:
+  - admins

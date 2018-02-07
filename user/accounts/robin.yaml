@@ -1,0 +1,12 @@
+state: enabled
+email: rh584@cam.ac.uk
+fullname: 'Robin Hughes'
+language: en
+twofa_enabled: false
+twofa_secret: RFJ2TXCUXL26UG5CHVGZ52ZX26EMA44J
+access:
+  admin: {  }
+  admin-addon-user-manager: {  }
+hashed_password: $2y$10$mwk/yAGBpXv.09bFaHEvg.4Qjvob2bttxaWZ1MWX9Z.eYMuJDLh9u
+groups:
+  - admins
