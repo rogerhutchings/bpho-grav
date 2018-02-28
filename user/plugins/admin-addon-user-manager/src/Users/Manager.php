@@ -98,7 +98,7 @@ class Manager implements IManager, EventSubscriberInterface {
    */
   public function getNav() {
     return [
-      'label' => 'User Manager',
+      'label' => $this->grav['language']->translate(['PLUGIN_ADMIN_ADDON_USER_MANAGER.USER_MANAGER']),
       'location' => $this->getLocation(),
       'icon' => 'fa-user',
       'authorize' => $this->getRequiredPermission(),
@@ -130,7 +130,7 @@ class Manager implements IManager, EventSubscriberInterface {
     if ($method === 'taskUserDelete') {
       $username = $this->grav['uri']->paths()[2];
       if ($this->removeUser($username)) {
-        $this->grav->redirect($this->getLocation());
+        $this->adminController->setRedirect($this->getLocation());
       }
     } elseif ($method === 'taskUserLoginAs') {
       $username = $this->grav['uri']->paths()[2];
