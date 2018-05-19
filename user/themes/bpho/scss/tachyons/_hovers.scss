@@ -10,3 +10,12 @@
     border-bottom-width: 1px;
   }
 }
+
+.hover-blue-fill {
+  &:hover {
+    svg * {
+      transition: fill .15s ease-in;
+      fill: $blue;
+    }
+  }
+}

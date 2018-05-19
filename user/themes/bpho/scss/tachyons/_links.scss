@@ -2,5 +2,6 @@ a {
   @extend .link;
   @extend .blue;
   @extend .fw4;
-  @extend .underline-hover;
+  @extend .underline;
+  @extend .no-underline-hover;
 }
