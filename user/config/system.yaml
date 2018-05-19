@@ -116,7 +116,7 @@ assets:
       - 'https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js'
       - 'https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js'
     fonts:
-      - 'https://fonts.googleapis.com/css?family=Nunito+Sans:100,200,400'
+      - 'https://fonts.googleapis.com/css?family=Nunito+Sans:200,400,600,700'
 errors:
   display: '1'
   log: true
