@@ -43,10 +43,14 @@ We hold seven competitions organised through two strands:
     </h3>
     <ul>
       <li>
-        Astrophysics A2 Challenge
+        <a href="/baao/astrophysics-a2-challenge">
+          Astrophysics A2 Challenge
+        </a>
       </li>
       <li>
-        Astrophysics Olympiad
+        <a href="/baao/baao">
+          Astrophysics Olympiad
+        </a>
       </li>
     </ul>
   </div>

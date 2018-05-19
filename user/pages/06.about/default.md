@@ -29,7 +29,7 @@ University of Oxford
 Parks Road
 OX1 3PU
 
-**Lena Hagan** is the Administrative Secretary for the BPhO at Oxford and she available to answer your queries about the competitions.
+**Lena Shams** is the Administrative Secretary for the BPhO at Oxford and she available to answer your queries about the competitions.
 
 For enquiries please contact [BPhO@physics.ox.ac.uk](mailto:BPhO@physics.ox.ac.uk).
 

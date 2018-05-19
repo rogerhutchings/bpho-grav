@@ -7,6 +7,6 @@ twofa_secret: V5266OYYI5EH25KTODQXMPPLSOAMRG3J
 access:
   admin: {  }
   admin-addon-user-manager: {  }
-hashed_password: $2y$10$dnVCTpo75r0VKEeaBbuSE.eW05DX5wPJ.VSAKmRJeTLbaBUkM0fVi
+hashed_password: $2y$10$Qv43wbs.AkMs5Vo4w./kB.amBMjvP7ofPz.rXKhuds7CdlcPgx2ZG
 groups:
   - admins

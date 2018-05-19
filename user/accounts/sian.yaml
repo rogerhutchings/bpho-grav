@@ -3,10 +3,11 @@ email: sian.tedaldi@physics.ox.ac.uk
 fullname: 'Sian Tedaldi'
 language: en
 twofa_enabled: false
-twofa_secret: RFJ2TXCUXL26UG5CHVGZ52ZX26EMA44J
+twofa_secret: JTDUIYQFQR4XNNOXIVMQ2LTAPTCKTGS5
 access:
   admin: {  }
   admin-addon-user-manager: {  }
-hashed_password: $2y$10$WYOh8OdNvUrO26m3hXENe.hdqBD3uq3/6O1P7/Hs6oapolQrcvxte
+hashed_password: $2y$10$.RmJnh7ieSE8ZmHS6alqMO3P6t2Z0.is.LlOdwLF..1cxNLNmiujS
 groups:
   - admins
+login_attempts: {  }

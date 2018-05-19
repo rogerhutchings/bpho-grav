@@ -7,6 +7,7 @@ twofa_secret: RFJ2TXCUXL26UG5CHVGZ52ZX26EMA44J
 access:
   admin: {  }
   admin-addon-user-manager: {  }
-hashed_password: $2y$10$mwk/yAGBpXv.09bFaHEvg.4Qjvob2bttxaWZ1MWX9Z.eYMuJDLh9u
+hashed_password: $2y$10$pVWEi4fUYuHTx8vLDmIYnOhv23XE29p.BB3agE7cnikl8vaJ1RWq2
 groups:
   - admins
+login_attempts: {  }
