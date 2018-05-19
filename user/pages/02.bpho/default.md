@@ -4,6 +4,13 @@ date: '23:42 07-10-2017'
 menu: BPhO
 ---
 
+## Competitions
+
+* [Physics Challenge (GCSE)](/bpho/physics-challenge)
+* [AS Challenge](/bpho/as-challenge)
+* [A2 Challenge](/bpho/a2-challenge)
+* [Experimental Project](/bpho/experimental-project)
+
 ## Why take part?
 
 The British Physics Olympiad (BPhO) aims to encourage the study of Physics and recognise excellence in young physicists through four annual Physics competitions.

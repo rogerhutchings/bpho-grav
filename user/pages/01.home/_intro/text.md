@@ -15,26 +15,31 @@ We hold seven competitions organised through two strands:
     </h3>
     <ul>
       <li>
-        Physics Challenge (GCSE)
+        <a href="/bpho/physics-challenge">
+          Physics Challenge (GCSE)
+        </a>
       </li>
       <li>
-        AS Challenge
+        <a href="/bpho/as-challenge">
+          AS Challenge
+        </a>
       </li>
       <li>
-        A2 Challenge
+        <a href="/bpho/a2-challenge">
+          A2 Challenge
+        </a>
       </li>
       <li>
-        British Physics Olympiad
-      </li>
-      <li>
-        Experimental Project
+        <a href="/bpho/experimental-project">
+          Experimental Project
+        </a>
       </li>
     </ul>
   </div>
 
   <div class="w-50-ns">
     <h3 class="f5 pl4 ml2">
-      BPhO Competitions
+      BAAO Competitions
     </h3>
     <ul>
       <li>

@@ -4,6 +4,11 @@ date: '23:58 07-10-2017'
 menu: BAAO
 ---
 
+## Competitions
+
+- [Astrophysics Olympiad](/baao/baao)
+- [BAAO A2 Challenge](/baao/a2-challenge)
+
 The British Astronomy and Astrophysics Olympiad is a new project that has formed within the BPhO trust. It was launched in 2015 and offers schools across the UK a series of competition papers that focus on astronomy and astrophysics. It is a gateway to competing in the International Olympiad in Astronomy and Astrophysics (IOAA), allowing students to represent their country and compete with over 40 other nations.
 
 The BOAA is currently targeted at students in Years 12 and 13, however GCSE students can attempt it as well. The competition is syllabus independent, and will assume no prior modules specialising in astronomy have been taken. It is based on core physics applied to the wider universe, with extra details being provided in the questions.
