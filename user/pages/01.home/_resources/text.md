@@ -2,6 +2,7 @@
 title: Resources
 showTitle: true
 date: '10:04 28-09-2017'
+pt: 'pt4'
 ---
 
 [IsaacPhysics.org](https://isaacphysics.org/) is a MOOC (Massive Open Online Course) to develop problem solving skills. It has levels 1–6 which will provide sixth formers with challenges that will suit every student who wishes to show initiative and get ahead. Teachers will also find the materials can be used to engage their students and details of courses are provided for CPD. Have a look. If you want to move ahead then [IsaacPhysics.org](https://isaacphysics.org/) is it.

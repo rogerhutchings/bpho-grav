@@ -4840,10 +4840,10 @@ a:visited {
 .mb3 {
   margin-bottom: 1rem; }
 
-.mb4 {
+.mb4, .modular-text h1 {
   margin-bottom: 2rem; }
 
-.mb5, .modular-text h1 {
+.mb5 {
   margin-bottom: 4rem; }
 
 .mb6 {
