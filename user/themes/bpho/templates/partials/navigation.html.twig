@@ -1,5 +1,6 @@
 {% from 'macros/home-button.html.twig' import homeButton  %}
 {% from 'macros/close-button.html.twig' import closeButton  %}
+{% from 'macros/menu-button.html.twig' import menuButton  %}
 
 {% set buttonOptions = {
   jsClass: 'js-close-menu',
@@ -10,7 +11,7 @@
 
 {% macro topLevelLink(url, title) %}
   <a
-    class="white fw1"
+    class="fw2 f6 underline-hover no-underline dark-gray hover-blue"
     href="{{ url }}"
   >
     {{ title }}
@@ -25,13 +26,16 @@
   {% endfor %}
 {% endmacro %}
 
-<nav class="js-nav js-dn bg-navy white ph4 pv4 w-100 border-box flex justify-center">
-  <div class="absolute left-2 top-50 translate-y-center flex justify-start items-center">
-    {{ homeButton({ theme: 'light' }) }}
-    {{ closeButton() }}
+<nav class="border-box flex">
+  <div class="flex justify-start items-center">
+    {{ homeButton() }}
+    <div class="js-nav-buttons">
+      {{ menuButton() }}
+      {{ closeButton() }}
+    </div>
   </div>
-  <div class="js-nav-items flex">
-    <ul class="list pl0 ma0 flex flex-column items-center">
+  <div class="js-nav-wrapper flex justify-start items-center w-100 background-white">
+    <ul class="js-nav list pl0 ma0 flex flex-row justify-start items-center">
       {{ _self.loop(pages) }}
     </ul>
   </div>
