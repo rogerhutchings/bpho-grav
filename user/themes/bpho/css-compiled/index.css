@@ -7232,7 +7232,7 @@ h6 {
   pointer-events: none; }
 
 .quote {
-  quotes: "“" "”" "‘" "’";
+  quotes: "\201C" "\201D" "\2018" "\2019";
   position: relative; }
   .quote:before {
     content: open-quote;
