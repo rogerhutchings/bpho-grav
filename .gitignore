@@ -13,6 +13,7 @@ cache/*
 !cache/.*
 logs/*
 !logs/.*
+user/themes/antimatter
 user/localhost/config/security.yaml
 user/config/security.yaml
 
