@@ -4,6 +4,10 @@ media_order: clip_image002.jpg
 date: '22:09 20-07-2011'
 ---
 
+It was a very successful year for the British team at the International Physics Olympiad (IPhO). This year the competition took place in Bangkok, Thailand, with 85 countries from across the world participating.
+
+===
+
 ![](clip_image002.jpg){.fr} It was a very successful year for the British team at the International Physics Olympiad (IPhO). This year the competition took place in Bangkok, Thailand, with 85 countries from across the world participating.
 
 The British team of five were delighted to bring home a full tally of three silver and two bronze medals. Edward Godfrey (Thomas Hardye School, Dorset) was awarded a silver medal and when asked how he felt said “ I enjoyed representing Great Britain. It was a challenge and I was surprised to win a silver medal".

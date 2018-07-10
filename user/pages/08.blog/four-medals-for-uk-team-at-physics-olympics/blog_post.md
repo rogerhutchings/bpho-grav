@@ -4,6 +4,10 @@ media_order: IPhOteam.JPG
 date: '21:56 29-07-2008'
 ---
 
+An excellent result saw the UK Physics team bring four bronze medals and a honourable mention home from the International Physics Olympiad in Hanoi, Vietnam.
+
+===
+
 ![](IPhOteam.JPG){.fr} An excellent result saw the UK Physics team bring four bronze medals and a honourable mention home from the International Physics Olympiad in Hanoi, Vietnam.
 
 William Kalderon, Harry Desmond, Michael Lipton and Harry Eakins all achieved bronze medals, with Peter Townsend gaining an Honourable Mention. The students joined 400 other young physicists for a ten day trip to Vietnam during 20th - 29th July. The competition interspersed two grueling 5-hour practical and experimental papers with an exciting social and cultural programme that afforded students a flavour of their host country and time meet competitors from around the world.

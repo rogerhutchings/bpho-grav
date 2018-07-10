@@ -1,6 +1,9 @@
 {% set bottomMargin = (loop.last) ? 'mb0' : 'mb5' %}
+{% set first_image = page.media.images|first|default(null) %}
 
 <article class="mb5">
+
+  {{ dump(first_image) }}
 
   <time class="dib f6" datetime="{{ page.date|date("c") }}">
     {{ page.date|date("F j, Y") }}
@@ -12,9 +15,23 @@
     </a>
   </h2>
 
-  {{ page.summary }}
+  {% if first_image %}
+    <div class="flex flex-column flex-row-ns">
+      <div class="w-33-ns flex-none ml3-ns pt3-ns order-2-ns">
+        {{ first_image.html('', '', 'w-100') }}
+      </div>
+      <div class="w-66-ns order-1-ns">
+        {{ page.summary }}
+      </div>
+    </div>
+  {% else %}
+    <div>
+      {{ page.summary }}
+    </div>
+  {% endif %}
 
   <a href="{{ page.url }}">
     Read more...
   </a>
+
 </article>
