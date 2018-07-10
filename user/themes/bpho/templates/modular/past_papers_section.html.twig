@@ -30,13 +30,7 @@
   } %}
   {% set fileType = fileTypes[paper.file|first.type] %}
 
-  <a href="/{{ paper.file|first.path }}">
-    {% if paper.customTitle %}
-      {{ paper.customTitle }}
-    {% else %}
-      {{ paper.title }}
-    {% endif %}
-  </a>
+  <a href="/{{ paper.file|first.path }}">{{ paper.customTitle|default(paper.title) }}</a>
   {% if fileType %}
     <span class="ml2 mr1 f6 ttu">{{ fileType.title }}</span>
     <i class="fa {{ fileType.icon }} gray" aria-hidden="true"></i>
