@@ -23,7 +23,7 @@
   {% endif %}
 
   <div class="{{ bgFillColor }} {{ padding }}">
-    <div class="measure-wide center pv5 ph3">
+    <div class="measure-wide center pv5 ph3 relative">
       <h2 class="f4 fw4 mt0 mb5">
         {% block title %}
           {{ header.title }}
@@ -33,10 +33,20 @@
       {% block content %}
         Polygon content
       {% endblock content %}
+
+      {% if bottomTriangle == true %}
+        {% set image = media_directory('theme://images')['penrose.png'] %}
+        {% set style = (direction == 'left') ? 'left: -50px' : 'right: -50px' %}
+        <div class="absolute db z-1" style="bottom: -280px; {{ style }}">
+          {{ image.cropResize(300,300).html }}
+        </div>
+      {% endif %}
     </div>
   </div>
 
   {% if bottomTriangle == true %}
-    {{ triangle(direction, 'down', fillColor) }}
+    <div class="relative" style="min-height: 300px">
+      {{ triangle(direction, 'down', fillColor) }}
+    </div>
   {% endif %}
 </section>
