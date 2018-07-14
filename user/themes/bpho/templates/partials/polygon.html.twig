@@ -37,7 +37,7 @@
       {% if bottomTriangle == true %}
         {% set image = media_directory('theme://images')['penrose.png'] %}
         {% set style = (direction == 'left') ? 'left: -50px' : 'right: -50px' %}
-        <div class="absolute db z-1" style="bottom: -280px; {{ style }}">
+        <div class="absolute dn db-ns z-1" style="bottom: -280px; {{ style }}">
           {{ image.cropResize(300,300).html }}
         </div>
       {% endif %}
