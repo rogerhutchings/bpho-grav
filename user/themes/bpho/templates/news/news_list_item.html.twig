@@ -16,7 +16,9 @@
   {% if firstImage %}
     <div class="flex flex-column flex-row-ns">
       <div class="w-33-ns flex-none ml3-ns pt3-ns order-2-ns">
-        {{ first_image.html('', '', 'w-100') }}
+        <div class="ba b--moon-gray pa1 bg-white">
+          {{ firstImage.html('', '', 'db w-100') }}
+        </div>
       </div>
       <div class="w-66-ns order-1-ns">
         {{ page.summary }}

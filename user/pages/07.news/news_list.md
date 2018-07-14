@@ -1,9 +1,9 @@
 ---
-title: 'BPhO & BAAO Blog'
+title: 'BPhO & BAAO News'
 date: '17:31 27-09-2017'
-menu: Blog
-slug: blog
-child_type: blog_post
+menu: News
+slug: news
+child_type: news_post
 content:
     items: '@self.children'
     order:
@@ -12,4 +12,3 @@ content:
     limit: 5
     pagination: true
 ---
-
