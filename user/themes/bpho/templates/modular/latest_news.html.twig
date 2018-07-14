@@ -9,6 +9,9 @@
     <ul class="list pl0 ma0">
 
       {% for post in posts %}
+        {% set firstImage = post.media.images|first|default(null) %}
+        {{ dump(firstImage) }}
+
         <li class="bt b--moon-gray flex pt2 mb3">
 
           <time class="db w-20" datetime="{{ post.date|date("c") }}">
@@ -22,9 +25,17 @@
 
           <div class="w-80">
             <a href="{{ post.url }}" class="db black no-underline underline-hover">
+
               <div>
                 {{ post.title }}
               </div>
+
+              {% if firstImage %}
+                <div class="ba b--moon-gray pa1 mt3">
+                  {{ firstImage.html('', '', 'db w-100') }}
+                </div>
+              {% endif %}
+
               <div class="db tr mt2 fw2">
                 Read more...
               </div>
