@@ -14,3 +14,5 @@ RUN mkdir tmp-repo &&\
   chown -R www-data:www-data tmp-repo/* &&\
   rm -rf user &&\
   mv tmp-repo/user .
+
+EXPOSE 80
