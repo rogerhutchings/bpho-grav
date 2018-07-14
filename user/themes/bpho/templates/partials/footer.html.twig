@@ -1,3 +1,12 @@
+{% import _self as macros %}
+
+{% macro socialMediaLink(title, iconClass, url) %}
+  <a href="{{ url }}" class="dib no-underline-hover white hover-gold f3 ml5 v-mid">
+    <i class="fab {{ iconClass }}" aria-hidden="true"></i>
+    <span class="clip">{{ title }}</span>
+  </a>
+{% endmacro socialMediaLink %}
+
 <footer class="flex-ns flex-wrap white f6">
 
   {% include 'partials/sponsors.html.twig' %}
@@ -33,14 +42,8 @@
     </div>
     <div class="mt4">
       Connect
-      <a href="https://www.facebook.com/The.BPhO/" class="no-underline-hover white hover-gold f3 ml5 v-mid">
-        <i class="fab fa-facebook" aria-hidden="true"></i>
-        <span class="clip">Facebook</span>
-      </a>
-      <a href="https://twitter.com/thebpho" class="no-underline-hover white hover-gold f3 ml5 v-mid">
-        <i class="fab fa-twitter" aria-hidden="true"></i>
-        <span class="clip">Twitter</span>
-      </a>
+      {{ macros.socialMediaLink('Facebook', 'fa-facebook', 'https://www.facebook.com/The.BPhO/') }}
+      {{ macros.socialMediaLink('Twitter', 'fa-twitter', 'https://twitter.com/thebpho') }}
     </div>
   </section>
 </footer>
