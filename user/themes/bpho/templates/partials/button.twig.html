@@ -1,8 +1,19 @@
-{% set defaultClasses = 'f6 fw1 ba minw5 link ph3 pv2 mb2 mh3 dib no-underline-hover instant b--white white bg-dark-gray hover-dark-blue hover-bg-white' %}
+{# These are the buttons used in the hero section on the home page #}
+
+{% set defaultClasses = 'f6 fw1 minw5 link ph3 pv2 mb2 mh3 dib no-underline-hover instant' %}
+
+{% if inverse %}
+  {% set themeClasses = 'dark-gray bg-gold hover-bg-white' %}
+{% else %}
+  {% set themeClasses = 'ba b--white white bg-dark-gray hover-dark-blue hover-bg-white' %}
+{% endif %}
 
 <a
-  class="{{ defaultClasses }}"
+  class="{{ defaultClasses }} {{ themeClasses }}"
   href="{{ url }}"
 >
+  {% if icon %}
+    <i class="fal {{ icon }} mr2 vmid" aria-hidden="true"></i>
+  {% endif %}
   {{ text }}
 </a>

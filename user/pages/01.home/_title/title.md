@@ -21,16 +21,22 @@ process:
 </p>
 
 <div class="pt2 mb3">
-  {% set competitionDates = {
+  {% include 'partials/button.twig.html' with {
     url: '#_competition-dates',
     text: 'Competition Dates',
-    hoverColor: 'dark-blue'
-  } %}
-  {% set pastPapers = {
-    url: '/past-papers',
-    text: 'Past Papers'
+    icon: 'fa-calendar-alt'
   } %}
 
-  {% include 'partials/button.twig.html' with competitionDates %}
-  {% include 'partials/button.twig.html' with pastPapers %}
+  {% include 'partials/button.twig.html' with {
+    url: '/past-papers',
+    text: 'Past Papers',
+    icon: 'fa-file-alt'
+  } %}
+
+  {% include 'partials/button.twig.html' with {
+    url: '/enter-online',
+    text: 'Enter Online',
+    icon: 'fa-trophy',
+    inverse: true
+  } %}
 </div>

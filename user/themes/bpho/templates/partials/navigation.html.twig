@@ -9,19 +9,21 @@
   text: 'Close'
 } %}
 
-{% macro topLevelLink(url, title) %}
-  <a
-    class="fw2 f6 underline-hover no-underline dark-gray hover-blue"
-    href="{{ url }}"
-  >
-    {{ title }}
-  </a>
-{% endmacro topLevelLink %}
-
 {% macro loop(page) %}
   {% for p in page.children.visible %}
+
+    {# We're going to add an emphasis for enter online #}
+    {% if p.slug is same as('enter-online') %}
+      {% set fw = 'fw4' %}
+    {% endif %}
+
     <li class="mr3">
-      {{ _self.topLevelLink(p.url, p.menu) }}
+      <a
+        class="{{ fw|default('fw2') }} f6 underline-hover no-underline dark-gray hover-blue"
+        href="{{ p.url }}"
+      >
+        {{ p.menu }}
+      </a>
     </li>
   {% endfor %}
 {% endmacro %}
