@@ -13,4 +13,4 @@ We have organised some of problems by topic. Visit our Question Bank page for mo
 
 ### Two free entries
 
-This year we are able to offer two free entries for all non-fee paying schools, due to sponsorship from a private donor, which has been allocated to BPhO to widen participation. Order your free papers [through the online store](http://www.oxforduniversitystores.co.uk/product-catalogue/physics/bpho-201718).
+This year we are able to offer two free entries for all non-fee paying schools, due to sponsorship from a private donor, which has been allocated to BPhO to widen participation. Order your free papers [through the online store](/enter-online).
