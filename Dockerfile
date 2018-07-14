@@ -1,4 +1,4 @@
-FROM "ahumaro/grav-php-nginx"
+FROM ahumaro/grav-php-nginx
 
 WORKDIR /usr/share/nginx/html
 
