@@ -25,7 +25,7 @@ function initNav () {
         .addClass('flex-column')
         .removeClass('flex-row')
       navWrapper
-        .addClass('justify-center absolute top-100 left-0 bg-white pb3')
+        .addClass('justify-center absolute top-100 left-0 bg-white pv3 shadow-2')
         .removeClass('justify-start')
       closeMenu()
     } else {
@@ -37,7 +37,7 @@ function initNav () {
         .removeClass('flex-column')
       navWrapper
         .addClass('justify-start')
-        .removeClass('justify-center absolute top-100 left-0 bg-white pb3')
+        .removeClass('justify-center absolute top-100 left-0 bg-white pv3 shadow-2')
       openMenu()
     }
   }
