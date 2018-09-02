@@ -1,9 +1,0 @@
-version: "3.2"
-services:
-  web:
-    # image: "rogerhutchings/grav-php-nginx"
-    build: .
-    ports:
-      - "80:80"
-    environment:
-      GIT_REPO: "foo"
