@@ -1,6 +1,7 @@
 ---
 title: 'British Astronomy and Astrophysics Olympiad (BAAO)'
 date: '23:58 07-10-2017'
+visible: false
 ---
 
 ## Competitions

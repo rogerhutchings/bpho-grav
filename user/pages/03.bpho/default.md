@@ -1,6 +1,7 @@
 ---
 title: 'British Physics Olympiad'
 date: '23:42 07-10-2017'
+visible: false
 ---
 
 ## Competitions
