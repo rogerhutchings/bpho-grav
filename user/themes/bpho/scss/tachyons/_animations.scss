@@ -1,13 +1,20 @@
-.anim-down-hover {
-  padding-top: 1rem;
-  svg {
-    transition: 1s ease-in-out;
-  }
-  &:hover svg {
-    transform: translateY(1rem);
-  }
-}
-
 .instant {
   transition-duration: 0s !important;
+}
+
+.animation-arrow {
+  animation-duration: 3s;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  10%, 66% {
+    transform: translateY(1rem);
+  }
 }

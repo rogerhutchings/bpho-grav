@@ -4,7 +4,7 @@
   "description": "The **BPhO** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this theme.",
   "scripts": {
     "assets": "webpack --progress --colors",
-    "assets:watch": "npm run js -- --watch",
+    "assets:watch": "npm run assets -- --watch",
     "build": "NODE_ENV=production npm run assets",
     "start": "npm run assets:watch"
   },

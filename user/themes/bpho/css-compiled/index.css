@@ -6923,15 +6923,20 @@ h6 {
   Add custom styles here.
 
 */
-.anim-down-hover {
-  padding-top: 1rem; }
-  .anim-down-hover svg {
-    transition: 1s ease-in-out; }
-  .anim-down-hover:hover svg {
-    transform: translateY(1rem); }
-
 .instant {
   transition-duration: 0s !important; }
+
+.animation-arrow {
+  animation-duration: 3s;
+  animation-name: arrow;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53); }
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0rem); }
+  10%, 66% {
+    transform: translateY(1rem); } }
 
 .bg-feynman {
   background-image: url("../images/background.png"); }
@@ -7230,6 +7235,9 @@ h6 {
     top: 2rem; }
   .quote p {
     display: inline; }
+
+.s-white {
+  stroke: #fff; }
 
 .translate-y-0 {
   transform: translateY(0); }
