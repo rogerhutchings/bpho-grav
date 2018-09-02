@@ -12,8 +12,10 @@ process:
 
 <h1 class="fw1 mb4">
   <div class="f5 mb2">Welcome to the</div>
-  {% include 'svgs/bpho-logo.svg.twig' with { classes: 'pr3 h2' } %}
-  <span class="fw4 f4 f3-ns">British Physics Olympiad</span>
+  <div class="flex align-center justify-center">
+    {% include 'svgs/bpho-logo.svg.twig' with { classes: 'pr3 h2 h3-ns' } %}
+    <span class="fw4 f4 f2-ns">British Physics Olympiad</span>
+  </div>
 </h1>
 
 <p class="f5 mb4 measure center">
