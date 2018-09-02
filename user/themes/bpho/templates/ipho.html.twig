@@ -1,0 +1,20 @@
+{% extends 'default.html.twig' %}
+
+{% block below_content %}
+  {% set iphos = page.collection %}
+
+  <section>
+    <h2>
+      Previous IPhOs
+    </h2>
+    <ol>
+      {% for ipho in iphos %}
+        <li>
+          <a href="{{ ipho.url }}">
+            {{ ipho.header.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endblock below_content %}

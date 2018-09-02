@@ -1,0 +1,89 @@
+/*
+   MIN WIDTHS
+   Base:
+     minw = min-width
+   Modifiers
+     1 = 1st step in width scale
+     2 = 2nd step in width scale
+     3 = 3rd step in width scale
+     4 = 4th step in width scale
+     5 = 5th step in width scale
+     6 = 6st step in width scale
+     7 = 7nd step in width scale
+     8 = 8rd step in width scale
+     9 = 9th step in width scale
+     -100 = literal value 100%
+     -none  = string value none
+   Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+*/
+
+/* Min Width Percentages */
+
+.minw-100  { min-width: 100%; }
+
+/* Min Width Scale */
+
+.minw1  {  min-width: $min-width-1; }
+.minw2  {  min-width: $min-width-2; }
+.minw3  {  min-width: $min-width-3; }
+.minw4  {  min-width: $min-width-4; }
+.minw5  {  min-width: $min-width-5; }
+.minw6  {  min-width: $min-width-6; }
+.minw7  {  min-width: $min-width-7; }
+.minw8  {  min-width: $min-width-8; }
+.minw9  {  min-width: $min-width-9; }
+
+/* Max Width String Properties */
+
+.minw-none { min-width: none; }
+
+@media #{$breakpoint-not-small} {
+  .minw-100-ns  { min-width: 100%; }
+
+  .minw1-ns  {  min-width: $min-width-1; }
+  .minw2-ns  {  min-width: $min-width-2; }
+  .minw3-ns  {  min-width: $min-width-3; }
+  .minw4-ns  {  min-width: $min-width-4; }
+  .minw5-ns  {  min-width: $min-width-5; }
+  .minw6-ns  {  min-width: $min-width-6; }
+  .minw7-ns  {  min-width: $min-width-7; }
+  .minw8-ns  {  min-width: $min-width-8; }
+  .minw9-ns  {  min-width: $min-width-9; }
+
+  .minw-none-ns { min-width: none; }
+}
+
+@media #{$breakpoint-medium} {
+  .minw-100-m  { min-width: 100%; }
+
+  .minw1-m  {  min-width: $min-width-1; }
+  .minw2-m  {  min-width: $min-width-2; }
+  .minw3-m  {  min-width: $min-width-3; }
+  .minw4-m  {  min-width: $min-width-4; }
+  .minw5-m  {  min-width: $min-width-5; }
+  .minw6-m  {  min-width: $min-width-6; }
+  .minw7-m  {  min-width: $min-width-7; }
+  .minw8-m  {  min-width: $min-width-8; }
+  .minw9-m  {  min-width: $min-width-9; }
+
+  .minw-none-m { min-width: none; }
+}
+
+@media #{$breakpoint-large} {
+  .minw-100-l  { min-width: 100%; }
+
+  .minw1-l  {  min-width: $min-width-1; }
+  .minw2-l  {  min-width: $min-width-2; }
+  .minw3-l  {  min-width: $min-width-3; }
+  .minw4-l  {  min-width: $min-width-4; }
+  .minw5-l  {  min-width: $min-width-5; }
+  .minw6-l  {  min-width: $min-width-6; }
+  .minw7-l  {  min-width: $min-width-7; }
+  .minw8-l  {  min-width: $min-width-8; }
+  .minw9-l  {  min-width: $min-width-9; }
+
+  .minw-none-l { min-width: none; }
+}

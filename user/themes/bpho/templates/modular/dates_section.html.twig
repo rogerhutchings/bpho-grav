@@ -1,0 +1,26 @@
+{% embed 'partials/polygon.html.twig' with { direction: 'right' } %}
+
+  {% block content %}
+    {% set options = { items: '@root.descendants' } %}
+    {% set competitions = page.collection(options).ofType('competition') %}
+
+    <ul class="list pl0 ma0">
+      {% for c in competitions %}
+        {% set details = c.header.competition %}
+        <li class="bt b--moon-gray flex justify-between items-end pt2 mb4">
+          <a href="{{ c.permalink }}">
+            {{ c.title }}
+          </a>
+          <div class="f6">
+            {% if details.availableFromDate %}
+              From {{ details.availableFromDate|date('F j, Y') }}
+            {% else %}
+              {{ details.examDate|date('F j, Y') }}
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endblock content %}
+
+{% endembed %}

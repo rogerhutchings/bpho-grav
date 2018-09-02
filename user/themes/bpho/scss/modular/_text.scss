@@ -1,0 +1,10 @@
+.modular-text {
+
+  h1 {
+    @extend .fw4;
+    @extend .f3;
+    @extend .mt0;
+    @extend .mb4;
+  }
+
+}

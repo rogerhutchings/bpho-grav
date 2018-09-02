@@ -1,0 +1,62 @@
+<?php
+return [
+    '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
+    'filename' => '/var/www/html/user/config/groups.yaml',
+    'modified' => 1531648910,
+    'data' => [
+        'admins' => [
+            'groupname' => 'admins',
+            'access' => [
+                'admin' => [
+                    'super' => 'true',
+                    'login' => 'true',
+                    'cache' => 'true',
+                    'configuration' => 'true',
+                    'configuration_system' => 'true',
+                    'configuration_site' => 'true',
+                    'configuration_media' => 'true',
+                    'configuration_info' => 'true',
+                    'settings' => 'true',
+                    'pages' => 'true',
+                    'maintenance' => 'true',
+                    'statistics' => 'true',
+                    'plugins' => 'true',
+                    'themes' => 'true',
+                    'users' => 'true'
+                ],
+                'admin-addon-user-manager' => [
+                    'users' => 'true',
+                    'groups' => 'true',
+                    'users_expert' => 'true'
+                ]
+            ]
+        ],
+        'editors' => [
+            'groupname' => 'editors',
+            'access' => [
+                'admin' => [
+                    'super' => 'false',
+                    'login' => 'true',
+                    'cache' => 'false',
+                    'configuration' => 'false',
+                    'configuration_system' => 'false',
+                    'configuration_site' => 'false',
+                    'configuration_media' => 'false',
+                    'configuration_info' => 'false',
+                    'settings' => 'false',
+                    'pages' => 'true',
+                    'maintenance' => 'false',
+                    'statistics' => 'false',
+                    'plugins' => 'false',
+                    'themes' => 'false',
+                    'users' => 'true'
+                ],
+                'admin-addon-user-manager' => [
+                    'users' => 'true',
+                    'groups' => 'true',
+                    'users_expert' => 'true'
+                ]
+            ]
+        ]
+    ]
+];

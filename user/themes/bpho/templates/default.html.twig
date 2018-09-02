@@ -1,0 +1,38 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  <main id="main" class="bg-white ph3 pv3 pv5-ns flex relative">
+
+    {% block background %}
+      <div class="absolute top-0 left-0 h-feynmann bg-dark-gray bg-feynman bg-center cover w-100"></div>
+    {% endblock background %}
+
+
+    {% block main_content %}
+      <article class="dib mh2 center bg-white relative z-1 ">
+
+        <div class="mw7 ph3 ph5-ns pv4 pv5-ns">
+
+          {% if config.plugins.breadcrumbs.enabled %}
+    				{% include 'partials/breadcrumbs.html.twig' %}
+    			{% endif %}
+
+          {% block title %}
+            <h1 class="lh-title f3 fw4 mb4">
+              {{ header.title }}
+            </h1>
+          {% endblock title %}
+
+          {% block content %}
+            {{ content|default('') }}
+          {% endblock content %}
+
+          {% block below_content %}
+          {% endblock below_content %}
+
+        </div>
+
+      </article>
+    {% endblock main_content %}
+  </main>
+{% endblock main %}

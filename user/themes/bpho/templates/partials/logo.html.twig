@@ -1,0 +1,19 @@
+{% set logoOptions = {
+  classes: 'h2 pr3 dib',
+  color: '#333'
+} %}
+
+<div class="fw4 flex items-center f6">
+  <a href="/bpho" class="no-underline no-underline-hover hover-blue hover-blue-fill dark-gray">
+    {% include 'svgs/bpho-logo.svg.twig' with logoOptions %}
+    <span class="dib mr4">
+      BPhO
+    </span>
+  </a>
+  <a href="/baao" class="no-underline no-underline-hover hover-blue hover-blue-fill dark-gray">
+    {% include 'svgs/baao-logo.svg.twig' with logoOptions %}
+    <span class="dib">
+      BAAO
+    </span>
+  </a>
+</div>

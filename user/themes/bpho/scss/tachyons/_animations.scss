@@ -1,0 +1,13 @@
+.anim-down-hover {
+  padding-top: 1rem;
+  svg {
+    transition: 1s ease-in-out;
+  }
+  &:hover svg {
+    transform: translateY(1rem);
+  }
+}
+
+.instant {
+  transition-duration: 0s !important;
+}

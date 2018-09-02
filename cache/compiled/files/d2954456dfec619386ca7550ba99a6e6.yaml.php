@@ -1,0 +1,23 @@
+<?php
+return [
+    '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
+    'filename' => '/var/www/html/user/config/site.yaml',
+    'modified' => 1531648910,
+    'data' => [
+        'title' => 'BPhO',
+        'default_lang' => 'en',
+        'author' => [
+            'name' => 'Joe Bloggs',
+            'email' => 'joe@test.com'
+        ],
+        'metadata' => [
+            'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+        ],
+        'summary' => [
+            'enabled' => true,
+            'format' => 'short',
+            'size' => 300,
+            'delimiter' => '==='
+        ]
+    ]
+];

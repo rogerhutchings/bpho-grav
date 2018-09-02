@@ -1,0 +1,31 @@
+{% extends 'default.html.twig' %}
+
+{% macro renderSection(section) %}
+  <h2>
+    {{ section.title }}
+  </h2>
+  <ul class="list pl0">
+    {% for faq in section.faqs %}
+      <li class="js-faq bt bb b--moon-gray pv2">
+        {{ _self.renderFaq(faq) }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro renderSection %}
+
+{% macro renderFaq(faq) %}
+  <h3 class="js-faq-question ma0 fw4">
+    {{ faq.question }}
+  </h3>
+  <div class="js-faq-answer js-dn mt3 ph3">
+    {{ faq.answer }}
+  </div>
+{% endmacro renderFaq %}
+
+{% block below_content %}
+  {% for section in header.sections %}
+    <section class="mb5">
+      {{ _self.renderSection(section) }}
+    </section>
+  {% endfor %}
+{% endblock below_content %}
