@@ -1,0 +1,91 @@
+title: Other Resources Section
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        content:
+          fields:
+
+            showContent:
+              type: section
+              title: Content Visibility
+              underline: true
+              fields:
+
+                header.showTitle:
+                  type: toggle
+                  label: Show Title
+                  default: 0
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
+
+                header.showContent:
+                  type: toggle
+                  label: Show Content
+                  default: 0
+                  highlight: 1
+                  options:
+                      1: PLUGIN_ADMIN.YES
+                      0: PLUGIN_ADMIN.NO
+                  validate:
+                      type: bool
+
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    name:
+                      default: modular/title
+                      '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+
+            overrides:
+              fields:
+                header.template:
+                  default: modular/title
+                  '@data-options': '\Grav\Common\Page\Pages::modularTypes'
+
+        papers:
+          type: tab
+          title: Papers
+          ordering@: 1
+          style: vertical
+          fields:
+
+            header.documents:
+              type: list
+              name: documents
+              style: vertical
+              collapsed: true
+              fields:
+
+                .title:
+                  type: text
+                  name: title
+                  label: Title
+
+                .file:
+                  type: file
+                  label: File
+                  multiple: false
+                  destination: 'self@'
+                  random_name: false
+                  avoid_overwriting: true
+                  limit: 0
+                  accept:
+                    - .pdf
+                    - .doc
+                    - .docx
+
+                .description:
+                  type: markdown
+                  name: description
+                  label: Description

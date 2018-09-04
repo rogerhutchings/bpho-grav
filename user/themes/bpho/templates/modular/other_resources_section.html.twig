@@ -1,0 +1,23 @@
+{% import "modular/macros.html.twig" as macros %}
+
+<div>
+  {% if page.header.showTitle %}
+    <h2>
+      {{ page.header.title }}
+    </h2>
+  {% endif %}
+
+  {% if page.header.showContent %}
+    {{ content }}
+  {% endif %}
+
+  <section class="flex-ns flex-row justify-start">
+    <ul class="pl0 list f5 mt0 flex-auto-ns">
+      {% for document in page.header.documents %}
+        <li>
+          {{ macros.renderDocument(document) }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

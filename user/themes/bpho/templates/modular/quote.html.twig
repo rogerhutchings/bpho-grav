@@ -1,5 +1,6 @@
-{% set quote = page.find(page.header.quote) %}
-{{ dump(quote) }}
+{% set quotes = { items: { '@page.children': '/quotes' } } %}
+{% set quotesCollection = page.collection(quotes) %}
+{% set quote = quotesCollection|randomize|first %}
 
 <section class="mw7 ph3 ph4-ns pv5 center">
   <blockquote class="f3 mh0 quote">
