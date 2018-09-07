@@ -30,7 +30,6 @@ RUN chmod +x /etc/service/nginx/run
 RUN echo '#!/bin/bash \n\
     exec /usr/sbin/nginx -g "daemon off;"' >>  /etc/service/nginx/run
 
-
 # Copy app files
 RUN rm -fR /usr/share/nginx/html/
 RUN mkdir /usr/share/nginx/html/
@@ -51,6 +50,7 @@ RUN umask 0002
 RUN cp /usr/share/nginx/html/webserver-configs/nginx.conf /etc/nginx/sites-available/default
 RUN sed -i \
         -e 's|root /home/USER/www/html|root   /usr/share/nginx/html|' \
+        -e 's|server_name localhost;|server_name bpho-production;|
         -e 's|unix:/var/run/php/php7.2-fpm.sock;|unix:/run/php/php7.0-fpm.sock;|' \
     /etc/nginx/sites-available/default
 
