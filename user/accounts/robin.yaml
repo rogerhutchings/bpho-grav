@@ -5,9 +5,14 @@ language: en
 twofa_enabled: false
 twofa_secret: RFJ2TXCUXL26UG5CHVGZ52ZX26EMA44J
 access:
+  site: {  }
   admin: {  }
   admin-addon-user-manager: {  }
-hashed_password: $2y$10$pVWEi4fUYuHTx8vLDmIYnOhv23XE29p.BB3agE7cnikl8vaJ1RWq2
+hashed_password: $2y$10$vsTokGgzyHiGR6OfkCpAUuuRYFwo.1uPq4nCa8CzCVVoOyeYG2YXS
 groups:
   - admins
-login_attempts: {  }
+_json:
+  avatar: 'null'
+  state: '"enabled"'
+  hashed_password: '"$2y$10$pVWEi4fUYuHTx8vLDmIYnOhv23XE29p.BB3agE7cnikl8vaJ1RWq2"'
+  login_attempts: '[]'
