@@ -5,5 +5,15 @@
       "ContainerPort": "80"
     }
   ],
-  "Logging": "/var/log/nginx"
+  "Logging": "/var/log/nginx",
+  "Volumes": [
+    {
+      "HostDirectory": "/home/ec2-user/grav/logs",
+      "ContainerDirectory": "/usr/share/nginx/html/logs"
+    },
+    {
+      "HostDirectory": "/home/ec2-user/grav/cache",
+      "ContainerDirectory": "/usr/share/nginx/html/cache"
+    }
+  ],
 }

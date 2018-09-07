@@ -31,39 +31,26 @@ RUN echo '#!/bin/bash \n\
     exec /usr/sbin/nginx -g "daemon off;"' >>  /etc/service/nginx/run
 
 
-# Install Grav
+# Copy app files
+RUN rm -fR /usr/share/nginx/html/
+RUN mkdir /usr/share/nginx/html/
 WORKDIR /usr/share/nginx/html/
 COPY ./ ./
 RUN chown -R www-data:www-data *
-RUN find . -type f -exec chmod 664 {} +
+RUN find . -type f -exec chmod 644 {} +
 RUN find ./bin -type f -exec chmod +x {} +
-RUN find . -type d -exec chmod 775 {} +
-RUN find . -type d -exec chmod +s {} +
+RUN find . -type d -exec chmod 755 {} +
 RUN umask 0002
 
 # Setup Grav configuration for Nginx
-RUN touch /etc/nginx/grav_conf.sh
-RUN chmod +x /etc/nginx/grav_conf.sh
-RUN echo '#!/bin/bash \n\
-    echo "" > /etc/nginx/sites-available/default \n\
-    ok="0" \n\
-    while IFS="" read line \n\
-    do \n\
-        if [ "$line" = "server {" ]; then \n\
-            ok="1" \n\
-        fi \n\
-        if [ "$ok" = "1" ]; then \n\
-            echo "$line" >> /etc/nginx/sites-available/default \n\
-        fi \n\
-        if [ "$line" = "}" ]; then \n\
-            ok="0" \n\
-        fi \n\
-    done < /usr/share/nginx/html/webserver-configs/nginx.conf' >> /etc/nginx/grav_conf.sh
-RUN /etc/nginx/grav_conf.sh
+RUN cp /usr/share/nginx/html/webserver-configs/nginx.conf /etc/nginx/sites-available/default
 RUN sed -i \
         -e 's|root /home/USER/www/html|root   /usr/share/nginx/html|' \
-        -e 's|unix:/var/run/php5-fpm.sock;|unix:/run/php/php7.0-fpm.sock;|' \
+        -e 's|unix:/var/run/php/php7.2-fpm.sock;|unix:/run/php/php7.0-fpm.sock;|' \
     /etc/nginx/sites-available/default
+
+# Create volumes
+VOLUME /usr/share/nginx/html/logs /usr/share/nginx/html/cache
 
 # Public ports
 EXPOSE 80
