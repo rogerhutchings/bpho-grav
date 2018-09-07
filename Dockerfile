@@ -36,6 +36,11 @@ RUN rm -fR /usr/share/nginx/html/
 RUN mkdir /usr/share/nginx/html/
 WORKDIR /usr/share/nginx/html/
 COPY ./ ./
+
+# Create volumes
+VOLUME /usr/share/nginx/html/logs /usr/share/nginx/html/cache
+
+# Fix permissions
 RUN chown -R www-data:www-data *
 RUN find . -type f -exec chmod 644 {} +
 RUN find ./bin -type f -exec chmod +x {} +
@@ -49,8 +54,6 @@ RUN sed -i \
         -e 's|unix:/var/run/php/php7.2-fpm.sock;|unix:/run/php/php7.0-fpm.sock;|' \
     /etc/nginx/sites-available/default
 
-# Create volumes
-VOLUME /usr/share/nginx/html/logs /usr/share/nginx/html/cache
 
 # Public ports
 EXPOSE 80
