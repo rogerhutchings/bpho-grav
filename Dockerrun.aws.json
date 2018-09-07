@@ -15,5 +15,5 @@
       "HostDirectory": "/home/ec2-user/grav/cache",
       "ContainerDirectory": "/usr/share/nginx/html/cache"
     }
-  ],
+  ]
 }
