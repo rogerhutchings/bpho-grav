@@ -15,7 +15,6 @@
 {% set c = header.competition %}
 
 {% block title %}
-  {{ dump(header) }}
   {% set date = (c.useDateBlurb) ? c.date|date('F j, Y') : c.dateBlurb|markdown %}
 
   {{ parent() }}

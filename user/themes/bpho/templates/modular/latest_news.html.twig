@@ -10,7 +10,6 @@
 
       {% for post in posts %}
         {% set firstImage = post.media.images|first|default(null) %}
-        {{ dump(firstImage) }}
 
         <li class="bt b--moon-gray flex pt2 mb3">
 
