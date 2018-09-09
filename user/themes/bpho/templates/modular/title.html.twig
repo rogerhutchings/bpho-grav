@@ -1,3 +1,9 @@
+{% if header.background %}
+  <div class="vh-100 dt w-100 tc white cover relative js-top-hero {{ header.backgroundClasses }}" style="background-image: url({{ header.backgroundImage }})">
+{% else %}
+  <div class="vh-100 dt w-100 tc bg-dark-gray bg-feynman bg-center white cover relative js-top-hero">
+{% endif %}
+
 <div class="vh-100 dt w-100 tc bg-dark-gray bg-feynman bg-center white cover relative js-top-hero">
   <div class="dtc v-mid pa2 js-dn">
     <div class="relative">

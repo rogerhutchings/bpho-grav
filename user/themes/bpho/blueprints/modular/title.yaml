@@ -26,14 +26,42 @@ form:
           fields:
             header.title:
               unset@: true
+
+            header.media_order:
+              unset@: true
+
             content:
               replace@: true
               type: textarea
               style: vertical
-              label: PLUGIN_ADMIN.TITLE
+              label: Sub-title text
+              help: Text to show under the site logo and title
               autofocus: true
-            uploads:
-              unset@: true
+
+            background:
+              type: section
+              title: Background
+              underline: true
+              fields:
+                header.backgroundImage:
+                  type: file
+                  label: Background Image
+                  multiple: false
+                  destination: 'self@'
+                  random_name: false
+                  avoid_overwriting: true
+                  limit: 1
+                  accept:
+                    - .jpg
+                    - .jpeg
+                    - .png
+                    - .svg
+
+                header.backgroundClasses:
+                  type: text
+                  help: Classes to apply to the background image. Don't modify unless you know what you're doing!
+                  label: Background Classes
+                  default: 'bg-dark-gray bg-center cover'
 
             jump:
               type: section
@@ -42,7 +70,8 @@ form:
               fields:
                 header.jump.enabled:
                   type: toggle
-                  label: Enable jump button
+                  label: Enable jump arrow
+                  help: 'Show or hide the jump arrow'
                   default: 1
                   highlight: 1
                   size: medium
@@ -53,4 +82,5 @@ form:
                     type: bool
                 header.jump.target:
                   type: text
-                  label: Target ID
+                  help: The ID of the element you wish to jump to, e.g. `_intro`
+                  label: Target element link
