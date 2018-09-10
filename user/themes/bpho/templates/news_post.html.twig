@@ -1,7 +1,5 @@
 {% extends 'default.html.twig' %}
 
-{% set content = page.content|slice(page.summary|length) %}
-
 {% block content %}
-  {{ content|default('') }}
+  {{ content }}
 {% endblock content %}
