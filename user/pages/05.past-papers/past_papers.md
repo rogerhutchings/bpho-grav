@@ -7,14 +7,6 @@ content:
     items: '@self.children'
     order:
         by: default
-        custom:
-            - round-1
-            - round-2
-            - a2-challenge
-            - as-competition
-            - experimental-project
-            - physics-challenge-gcse
-            - baao
 ---
 
 past papers
