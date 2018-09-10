@@ -89,9 +89,6 @@ sponsors:
                 type: image/svg+xml
                 size: 127373
                 path: user/pages/sponsors/ras.svg
-date: '10:15 10-09-2018'
-body_classes: ''
-order_by: ''
-order_manual: ''
+routable: false
 ---
 
