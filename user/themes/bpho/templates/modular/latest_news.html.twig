@@ -1,5 +1,10 @@
 {% embed 'partials/polygon.html.twig' %}
-  {% set posts = page.find('/news').children.order('date', 'desc').slice(0, 5) %}
+
+  {% set posts = page.find('/news')
+    .children
+    .order('date', 'desc')
+    .slice(0, 5)
+  %}
 
   {% block title %}
     {{ header.title }}

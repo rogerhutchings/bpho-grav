@@ -7,24 +7,24 @@
 
  */
 
-function initTopHero() {
-  const resizers = $('.js-top-hero');
-
-  if (!resizers.length) {
-    return false;
-  }
-
-  function setHeight(el) {
-    const navHeight = $('#header').outerHeight();
-    const windowHeight = $(window).height();
-    $(this).height(windowHeight - navHeight);
-  }
-
-  resizers.each(setHeight);
-  resizers.children('.js-dn').removeClass('js-dn');
-
-  $(window).resize(() =>
-    $.throttle(resizers.each(setHeight), 100));
-}
-
-$(document).ready(initTopHero);
+// function initTopHero() {
+//   const resizers = $('.js-top-hero');
+//
+//   if (!resizers.length) {
+//     return false;
+//   }
+//
+//   function setHeight(el) {
+//     const navHeight = $('#header').outerHeight();
+//     const windowHeight = $(window).height();
+//     $(this).height(windowHeight - navHeight);
+//   }
+//
+//   resizers.each(setHeight);
+//   resizers.children('.js-dn').removeClass('js-dn');
+//
+//   $(window).resize(() =>
+//     $.throttle(resizers.each(setHeight), 100));
+// }
+//
+// $(document).ready(initTopHero);

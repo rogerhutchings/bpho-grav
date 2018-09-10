@@ -1,15 +1,15 @@
 {% if header.background %}
   <div class="vh-100 dt w-100 tc white cover relative js-top-hero {{ header.backgroundClasses }}" style="background-image: url({{ header.backgroundImage }})">
 {% else %}
-  <div class="vh-100 dt w-100 tc bg-dark-gray bg-feynman bg-center white cover relative js-top-hero">
+  <div class="vh-100 h-auto-l ph2 pv5-l dt w-100 tc bg-dark-gray bg-feynman bg-center white cover relative js-top-hero">
 {% endif %}
 
-  <div class="dtc v-mid pa2 js-dn">
-    <div class="relative">
-      <div class="center">
+  <div class="flex items-center justify-center h-100">
+    <div class="">
+      <div class="">
         <h1 class="fw1 mb4">
           <span class="db f5 mb2">Welcome to the</span>
-          <span class="flex align-center justify-center">
+          <span class="inline-flex align-center justify-center">
             {% include 'svgs/bpho-logo.svg.twig' with { classes: 'pr3 h2 h3-ns' } %}
             <span class="fw4 f4 f2-ns">British Physics Olympiad</span>
           </span>
