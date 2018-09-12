@@ -18,6 +18,10 @@ form:
               title: Dates
               underline: true
               fields:
+                header.competition.yearGroup:
+                  type: text
+                  label: Year Group
+                  toggleable: true
                 header.competition.examDate:
                   type: date
                   label: Exam date

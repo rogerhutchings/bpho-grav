@@ -1,6 +1,7 @@
 {% extends 'default.html.twig' %}
 
 {% set headerLabels = {
+  yearGroup: 'Year Group',
   examDate: 'Exam date',
   availableFromDate: 'Available from',
   entryDeadlineDate: 'Submission deadline',
@@ -15,9 +16,13 @@
 {% set c = header.competition %}
 
 {% block title %}
-  {% set date = (c.useDateBlurb) ? c.date|date('F j, Y') : c.dateBlurb|markdown %}
+  {% set date = (c.useDateBlurb)
+    ? c.date|date('F j, Y')
+    : c.dateBlurb|markdown
+  %}
 
   {{ parent() }}
+
   <ul class="list pl0 ma0">
     {% for key, value in c %}
       <li>
