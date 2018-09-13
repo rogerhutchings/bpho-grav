@@ -1,14 +1,11 @@
+{% from 'macros/custom-background.html.twig' import customBackground %}
+
 {% set commonClasses = 'vh-100 h-auto-l ph2 pv5-l dt w-100 tc relative js-top-hero' %}
 {% set backgroundClasses = 'bg-dark-gray bg-feynman bg-center white cover' %}
 
-{% if header.background %}
-  {% set backgroundClasses = header.backgroundClasses %}
-  {% set backgroundStyle = 'style="background-image: url({{ header.backgroundImage }})"' %}
-{% endif %}
-
 <div
   class="{{ commonClasses }} {{ backgroundClasses }}"
-  {{ backgroundStyle|default('') }}
+  {{ customBackground() }}
 >
   <div class="flex flex-column items-center justify-center h-100">
     <div class="">

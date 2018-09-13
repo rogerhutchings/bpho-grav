@@ -38,31 +38,6 @@ form:
               help: Text to show under the site logo and title
               autofocus: true
 
-            background:
-              type: section
-              title: Background
-              underline: true
-              fields:
-                header.backgroundImage:
-                  type: file
-                  label: Background Image
-                  multiple: false
-                  destination: 'self@'
-                  random_name: false
-                  avoid_overwriting: true
-                  limit: 1
-                  accept:
-                    - .jpg
-                    - .jpeg
-                    - .png
-                    - .svg
-
-                header.backgroundClasses:
-                  type: text
-                  help: Classes to apply to the background image. Don't modify unless you know what you're doing!
-                  label: Background Classes
-                  default: 'bg-dark-gray bg-center cover'
-
             jump:
               type: section
               title: Jump button

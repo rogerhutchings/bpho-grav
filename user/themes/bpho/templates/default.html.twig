@@ -1,10 +1,11 @@
 {% extends 'partials/base.html.twig' %}
+{% from 'macros/custom-background.html.twig' import customBackground %}
 
 {% block main %}
   <main id="main" class="bg-white ph3 pv3 pv5-ns flex relative overflow-hidden">
 
     {% block background %}
-      <div class="absolute top-0 left-0 h-feynmann bg-dark-gray bg-feynman bg-center cover w-100"></div>
+      <div class="absolute top-0 left-0 h-background bg-dark-gray bg-feynman bg-center cover w-100" {{ customBackground() }}></div>
     {% endblock background %}
 
 
