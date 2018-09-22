@@ -1,0 +1,47 @@
+title: Sponsors
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+            replace@: true
+
+            header.title:
+              type: text
+              autofocus: true
+              style: vertical
+              label: PLUGIN_ADMIN.TITLE
+
+            sponsors:
+              type: section
+              title: Sponsor logos
+              underline: true
+              fields:
+
+                header.sponsors:
+                  name: Sponsors
+                  type: list
+                  style: vertical
+                  collapsed: true
+                  fields:
+
+                    .title:
+                      type: text
+                      label: Name
+
+                    .logo:
+                      type: file
+                      label: Logo
+                      help: All logos must be in SVG format
+                      multiple: false
+                      destination: 'self@'
+                      random_name: false
+                      avoid_overwriting: true
+                      limit: 0
+                      accept:
+                        - .svg

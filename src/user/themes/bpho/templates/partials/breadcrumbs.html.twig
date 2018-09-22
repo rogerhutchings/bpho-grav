@@ -1,0 +1,40 @@
+{% set crumbs = breadcrumbs.get() %}
+{% set breadcrumbs_config = config.plugins.breadcrumbs %}
+{% set divider = breadcrumbs_config.icon_divider_classes %}
+
+{% macro crumbTitle(crumb) %}<span itemprop="title">{{ crumb.menu }}</span>{% endmacro crumbTitle %}
+
+{% macro crumbLink(crumb) %}<a href="{{ crumb.url }}" itemprop="url">{{ _self.crumbTitle(crumb) }}</a>{% endmacro crumbLink %}
+
+{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
+  <div class="f6" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+
+    {% if breadcrumbs_config.icon_home %}
+      <i class="{{ breadcrumbs_config.icon_home }}"></i>
+    {% endif %}
+
+    {% for crumb in crumbs %}
+
+      {% if not loop.last %}
+
+        {% if crumb.routable %}
+          {{ _self.crumbLink(crumb) }}
+        {% else  %}
+          {{ _self.crumbTitle(crumb) }}
+        {% endif %}
+        <i class="{{ divider }} mh2"></i>
+
+      {% else %}
+
+        {% if breadcrumbs_config.link_trailing %}
+          {{ _self.crumbLink(crumb) }}
+        {% else %}
+          {{ _self.crumbTitle(crumb) }}
+        {% endif %}
+
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+{% endif %}

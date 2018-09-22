@@ -1,0 +1,10 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block main %}
+  <main id="main">
+    {% for module in page.collection() %}
+      <div id="{{ module.slug }}"></div>
+      {{ module.content }}
+    {% endfor %}
+  </main>
+{% endblock main %}

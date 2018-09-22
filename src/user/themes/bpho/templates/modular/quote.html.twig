@@ -1,0 +1,14 @@
+{% set quotes = { items: { '@page.children': '/quotes' } } %}
+{% set quotesCollection = page.collection(quotes) %}
+{% set quote = quotesCollection|randomize|first %}
+
+<section class="mw7 ph3 ph4-ns pv4 center">
+    <blockquote class="f3 ma0">
+      <div class="flex flex-row">
+        <div class="f0 lh-solid mr2" aria-hidden="true">&ldquo;</div>
+          {{ quote.content }}
+        <div class="f0 lh-solid ml2 self-end" aria-hidden="true">&rdquo;</div>
+      </div>
+      <footer class="tr f4">&ndash; <cite>{{ quote.header.source }}</cite></footer>
+    </blockquote>
+</section>

@@ -1,0 +1,11 @@
+{#
+   Outputs the background image URL, for use in e.g. an inline `style`
+   attribute. Defaults to the feynmann diagram bg.
+#}
+
+{% macro customBackground() %}
+  {% set bg = grav.config.theme.background|first %}
+  {% if bg %}
+    style="background-image: url({{ '/' ~ bg.path }})"
+  {% endif %}
+{% endmacro %}

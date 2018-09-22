@@ -1,0 +1,42 @@
+{% from 'macros/triangle.html.twig' import triangle %}
+
+{% set direction = direction|default('left') %}
+{% set topTriangle = topTriangle|default(true) %}
+{% set bottomTriangle = bottomTriangle|default(true) %}
+
+{% set fillColor = fillColor|default('lightest-blue') %}
+{% set bgFillColor = 'bg-' ~ fillColor %}
+
+{% set margin = (direction == 'left')
+  ? 'mr0 mr5-ns mr6-l'
+  : 'ml0 ml5-ns ml5-l'
+%}
+
+{% set padding = (direction == 'left')
+  ? 'pl0 pl5-ns pl6-l'
+  : 'pr0 pr5-ns pr5-l'
+%}
+
+<section class="{{ margin }}">
+  {% if topTriangle == true %}
+    {{ triangle(direction, 'up', fillColor) }}
+  {% endif %}
+
+  <div class="{{ bgFillColor }} {{ padding }}">
+    <div class="measure-wide center pv4 ph3 relative">
+      <h2 class="f4 fw4 mt0 mb3">
+        {% block title %}
+          {{ header.title }}
+        {% endblock title %}
+      </h2>
+
+      {% block content %}
+        Polygon content
+      {% endblock content %}
+    </div>
+  </div>
+
+  {% if bottomTriangle == true %}
+    {{ triangle(direction, 'down', fillColor) }}
+  {% endif %}
+</section>

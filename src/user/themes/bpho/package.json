@@ -1,0 +1,26 @@
+{
+  "name": "bpho",
+  "version": "0.0.1",
+  "description": "The **BPhO** Theme is for [Grav CMS](http://github.com/getgrav/grav).  This README.md file should be modified to describe the features, installation, configuration, and general usage of this theme.",
+  "scripts": {
+    "assets": "webpack --progress --colors",
+    "assets:watch": "npm run assets -- --watch",
+    "build": "NODE_ENV=production npm run assets",
+    "start": "npm run assets:watch"
+  },
+  "author": "Roger Hutchings <roger@hutchin.gs> (https://www.rogerhutchin.gs/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "tachyons-sass": "^4.7.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.12.0"
+  }
+}
