@@ -6,6 +6,9 @@ visible: false
 
 ## Competitions
 
+* [Round 1](/bpho/round-1)
+* [Round 2](/bpho/round-2)
+* [Round 3](/bpho/round-3)
 * [Physics Challenge (GCSE)](/bpho/physics-challenge)
 * [AS Challenge](/bpho/as-challenge)
 * [A2 Challenge](/bpho/a2-challenge)

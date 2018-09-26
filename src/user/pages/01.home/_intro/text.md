@@ -12,6 +12,22 @@ We hold seven competitions organised through two strands:
       BPhO Competitions
     </h3>
     <ul>
+
+      <li>
+        <a href="/bpho/round-1">
+          Round 1
+        </a>
+      </li>
+      <li>
+        <a href="/bpho/round-2">
+          Round 2
+        </a>
+      </li>
+      <li>
+        <a href="/bpho/round-3">
+          Round 3
+        </a>
+      </li>
       <li>
         <a href="/bpho/physics-challenge">
           Physics Challenge (GCSE)
