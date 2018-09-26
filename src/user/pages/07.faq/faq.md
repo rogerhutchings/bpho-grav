@@ -32,6 +32,9 @@ sections:
                 question: 'How do I receive my two free entries to BPhO Round 1?'
                 answer: 'Non-fee paying schools and colleges can order two papers from the item labelled ‘BPhO Round 1: Entry (Two free entries for non fee paying schools)’ in the online store. The remainder of the papers can be ordered through the normal entry items in the store, ‘BPhO Round 1: Entry (Schools to be invoiced £18 per person)’ or ‘BPhO Round 1: Entry (Card payment)’.'
             -
+                question: 'What happens after I order my papers? '
+                answer: 'All papers will be emailed a week before the test date, with the exception of Round 1 which will also be posted if ordered before the deadline.'
+            -
                 question: 'Are any papers sent in printed form?'
                 answer: 'Yes, Round 1 and Round 2 papers.'
             -

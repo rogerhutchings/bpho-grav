@@ -11,6 +11,11 @@ The papers and certificates are listed under 'physics' and 'BPhO'.
 
  If you need help using the online store, see this [How To document](How_to_shop.pdf), or email [BPhO@physics.ox.ac.uk](mailto:BPhO@physics.ox.ac.uk).
 
+## Mailing list
+
+To keep up to date with our competition please join our [Mailing list](https://www2.physics.ox.ac.uk/bpho-mailing-list-new)
+
+
 ## Free entry
 
 We offer two free entries for all non-fee paying schools, due to sponsorship from a private donor, which has been allocated to BPhO to widen participation.
